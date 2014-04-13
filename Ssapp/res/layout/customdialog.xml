@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:background="@android:color/transparent" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tempmed"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/tempmed"
+        android:background="@drawable/x_customtextfield"
+        android:ems="10"
+        android:inputType="phone"
+        android:paddingLeft="5dp"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/editText1"
+        android:background="@drawable/x_customtextfield"
+        android:ems="10"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:id="@+id/tempmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="64dp"
+        android:singleLine="true"
+        android:text="Max"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempmed"
+        android:layout_marginTop="31dp"
+        android:layout_toLeftOf="@+id/editText1"
+        android:text="Min"
+        android:textSize="17sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Notify me when mars temperature is in this range:" />
+
+</RelativeLayout>

@@ -12,7 +12,7 @@ public final class R {
         public static final int x_rotation=0x7f040000;
     }
     public static final class array {
-        public static final int addmars=0x7f060020;
+        public static final int addmars=0x7f060021;
         public static final int ariel=0x7f060018;
         public static final int callisto=0x7f06000b;
         public static final int deimos=0x7f060005;
@@ -20,7 +20,7 @@ public final class R {
         public static final int enceladus=0x7f06000e;
         public static final int europa=0x7f060009;
         public static final int fields=0x7f060000;
-        public static final int fromcuriositi=0x7f06001f;
+        public static final int fromcuriositi=0x7f060020;
         public static final int ganimedes=0x7f06000a;
         public static final int io=0x7f060008;
         public static final int jupiter=0x7f060007;
@@ -35,6 +35,9 @@ public final class R {
         public static final int phobos=0x7f060006;
         public static final int planetscode=0x7f06001e;
         public static final int rhea=0x7f060011;
+        /**  neptune 
+         */
+        public static final int satcode=0x7f06001f;
         public static final int saturn=0x7f06000c;
         public static final int tethys=0x7f06000f;
         public static final int theimages=0x7f06001d;
@@ -66,33 +69,46 @@ public final class R {
         public static final int jupiter=0x7f020003;
         public static final int mars=0x7f020004;
         public static final int mercury=0x7f020005;
-        public static final int neptuno=0x7f020006;
-        public static final int saturno=0x7f020007;
-        public static final int urano=0x7f020008;
-        public static final int venus=0x7f020009;
-        public static final int x_customselector=0x7f02000a;
-        public static final int x_universe=0x7f02000b;
+        public static final int moon=0x7f020006;
+        public static final int neptuno=0x7f020007;
+        public static final int saturno=0x7f020008;
+        public static final int urano=0x7f020009;
+        public static final int venus=0x7f02000a;
+        public static final int x_customselector=0x7f02000b;
+        public static final int x_customtextfield=0x7f02000c;
+        public static final int x_universe=0x7f02000d;
+        public static final int xz_ic_launcher=0x7f02000e;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000c;
-        public static final int content_frame=0x7f0a0006;
-        public static final int drawer_layout=0x7f0a0005;
-        public static final int left_drawer=0x7f0a0007;
+        public static final int action_settings=0x7f0a0012;
+        public static final int checkBox1=0x7f0a000d;
+        public static final int content_frame=0x7f0a0007;
+        public static final int drawer_layout=0x7f0a0006;
+        public static final int editText1=0x7f0a000a;
+        public static final int editText2=0x7f0a000b;
+        public static final int gridView1=0x7f0a0005;
+        public static final int left_drawer=0x7f0a0008;
         public static final int main_planetimage=0x7f0a0001;
         public static final int main_planetinfo=0x7f0a0004;
-        public static final int main_planetname=0x7f0a0002;
-        public static final int menu_info_res=0x7f0a0009;
-        public static final int menu_info_tags=0x7f0a0008;
-        public static final int menu_planetimage=0x7f0a000a;
-        public static final int menu_planetname=0x7f0a000b;
-        public static final int relative1=0x7f0a0003;
+        public static final int main_planetnam=0x7f0a0003;
+        public static final int menu_info_res=0x7f0a000f;
+        public static final int menu_info_tags=0x7f0a000e;
+        public static final int menu_planetimage=0x7f0a0010;
+        public static final int menu_planetname=0x7f0a0011;
+        public static final int rangebutton=0x7f0a0009;
         public static final int relative2=0x7f0a0000;
+        public static final int tempmed=0x7f0a0002;
+        public static final int textView2=0x7f0a000c;
     }
     public static final class layout {
-        public static final int activity_planets=0x7f030000;
-        public static final int activity_solar=0x7f030001;
-        public static final int info_list=0x7f030002;
-        public static final int menu_lists=0x7f030003;
+        public static final int activity_planetinfo=0x7f030000;
+        public static final int activity_planets=0x7f030001;
+        public static final int activity_satellite=0x7f030002;
+        public static final int activity_solar=0x7f030003;
+        public static final int customactionbar=0x7f030004;
+        public static final int customdialog=0x7f030005;
+        public static final int info_list=0x7f030006;
+        public static final int menu_lists=0x7f030007;
     }
     public static final class menu {
         public static final int solar=0x7f090000;

@@ -10,15 +10,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class SolarActivity extends Activity {
-
+	SolarDb db;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_solar);
 		
-		//SolarDb db = new SolarDb(getApplicationContext());
-		//db.open();
-		//db.close();
+		db = new SolarDb(getApplicationContext());
+		
+		if(firstini() == true){
+			String[] planets = this.getResources().getStringArray(R.array.theplanets);
+			int[] inits = this.getResources().getIntArray(R.array.planetscode);
+			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
+			String[] dats;
+			db.open();
+			db.createPlanets(planets);
+			for(int i=0; i<inits.length; i++){
+				dats = this.getResources().getStringArray(inits[i]);
+				db.create(dats);
+			}
+			for(int i=0; i<inits2.length; i++){
+				dats = this.getResources().getStringArray(inits2[i]);
+				db.create(dats);
+			}
+			
+			db.close();
+		}
 		
 		new SSClass(this);
 	}
@@ -52,6 +69,17 @@ public class SolarActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    
+    private boolean firstini(){
+		db.open();
+		String aux = db.getPlanet();
+		if(aux == null){
+			db.close();
+			return true;
+		}
+		db.close();
+		return false;		
     }
 
 }

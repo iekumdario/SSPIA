@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textColor="#7A77FF"
-        android:textSize="22sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/menu_info_res"
@@ -21,6 +21,6 @@
         android:gravity="right"
         android:text="TextView"
         android:textColor="#C6DAFF"
-        android:textSize="20sp" />
+        android:textSize="14sp" />
 
 </LinearLayout>

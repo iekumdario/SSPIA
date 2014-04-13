@@ -3,7 +3,9 @@ package com.fiec.ssapp.mclass;
 import com.fiec.ssapp.R;
 import com.fiec.ssapp.util.FillMenuAdapter;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -11,11 +13,14 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
-public class SSClass implements OnItemClickListener{
+public class SSClass implements OnItemClickListener, OnClickListener{
 	
 	private Activity act;
 	private DrawerLayout maindrawer;
@@ -25,17 +30,25 @@ public class SSClass implements OnItemClickListener{
 	private FillMenuAdapter adapter;
 	private String[] planets;
 	private int[] img;
+	
+	private ImageButton boton;
+	private Dialog dialog;
 
 	public SSClass(Activity activity) {
 		this.act = activity;
 		
-		activity.getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		activity.getActionBar().setCustomView(R.layout.customactionbar);
 		//activity.getActionBar().setHomeButtonEnabled(true);
         activity.getActionBar().setTitle(R.string.title_app);
+        activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
+                | ActionBar.DISPLAY_SHOW_HOME);
+        activity.getActionBar().setDisplayHomeAsUpEnabled(true);
         
         this.planets = activity.getResources().getStringArray(R.array.theplanets);
         this.img = activity.getResources().getIntArray(R.array.theimages);
-        
+        this.boton = (ImageButton)activity.findViewById(R.id.rangebutton);
+        this.boton.setOnClickListener(this);
         this.adapter = new FillMenuAdapter(activity, planets, img);
         this.maindrawer = (DrawerLayout)activity.findViewById(R.id.drawer_layout);
         this.maindrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);        
@@ -45,7 +58,7 @@ public class SSClass implements OnItemClickListener{
 		
 		drawerToggle = new ActionBarDrawerToggle(
                 activity,               
-                maindrawer,R.array.mercury,         
+                maindrawer,R.drawable.ic_drawer,         
                 /*R.drawable.ic_drawer,*/
                 R.string.drawer_open, 
                 R.string.drawer_close
@@ -70,7 +83,8 @@ public class SSClass implements OnItemClickListener{
 		selectItem(position);
 	}
 	
-	private void selectItem(int position) {		 
+	private void selectItem(int position) {		
+		Log.i("gmaTag", "Pos1 = "+position);
 	     //Bundle args = new Bundle();
 	     //args.putCharSequence(BaseMenuClass.ARG_TXT, "Inicio");
 	     MainFragment fragment = new MainFragment();
@@ -86,6 +100,15 @@ public class SSClass implements OnItemClickListener{
 	     drawerList.setItemChecked(position, true);
 	     //setTitle("Inicio");
 	     maindrawer.closeDrawer(drawerList);		
+	}
+
+	@Override
+	public void onClick(View v) {
+			dialog = new Dialog(act);
+			dialog.setContentView(R.layout.customdialog);
+			dialog.setTitle("Notifications");
+			dialog.setCanceledOnTouchOutside(true);
+			dialog.show();
 	}
 
 }
