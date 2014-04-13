@@ -33,8 +33,8 @@ Venus
 Mars        
 Jupiter     
 Saturn      
-Uran        
-Neptun      
+Uranus        
+Neptune      
 
 
 Moons:
