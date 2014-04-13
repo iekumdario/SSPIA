@@ -1,16 +1,16 @@
-SSPIA
+SSPIA (Solar System Planets Information App)
 =====
-
+This is an Android application that is solving the following challenge for the Nasa Space Apps Challenge
 http://goo.gl/Pq512e
 
-Solar System Planets Information App.
+Consists in giving the possible info of the Solar System Planets and moons.
 
-Consists in give the possible info of the Solar System Planets and moons.
+Data Sources:
+http://marsweather.ingenology.com/
+https://pds.jpl.nasa.gov/planets/special/planets.htm
+and other sources
 
-
-
-Give us information like:
-
+Shows the following information:
 Minimum, medium and maximum Temperature 
 Ice covered planets 
 Tipe of surface
@@ -24,8 +24,6 @@ Revolution period (length of year in Earth days)
 Obliquity (tilt of axis degrees)
 Orbit inclination (degrees)
 Orbit eccentricity (deviation from circular)
-Mean surface temperature (K)
-
 
 
 The available planets are:
@@ -39,9 +37,9 @@ Uran
 Neptun
 
 
-And there moons:
+Moons:
 
-Moon
+The Moon
 Deimos
 Phobos
 Io
