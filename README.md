@@ -13,7 +13,7 @@ and other sources
 Shows the following information:        
 Minimum, medium and maximum Temperature         
 Ice covered planets         
-Tipe of surface     
+Type of surface     
 Planet Mass (kg)        
 Planet Diameter (km)        
 Mean density (km)       
