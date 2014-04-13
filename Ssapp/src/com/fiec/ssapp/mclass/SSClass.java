@@ -45,7 +45,7 @@ public class SSClass implements OnItemClickListener{
 		
 		drawerToggle = new ActionBarDrawerToggle(
                 activity,               
-                maindrawer,R.array.mercury,         
+                maindrawer,R.array.venus,  
                 /*R.drawable.ic_drawer,*/
                 R.string.drawer_open, 
                 R.string.drawer_close
