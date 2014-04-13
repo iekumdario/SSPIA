@@ -11,24 +11,26 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/x_universe" >
 
-        <TextView
-            android:id="@+id/main_planetname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="SOL"
-            android:textColor="#7787E5"
-            android:textSize="20sp" />
-
         <ImageView
             android:id="@+id/main_planetimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/main_planetname"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             android:src="@drawable/saturno" />
+
+        <TextView
+            android:id="@+id/main_planetname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="SOL"
+            android:textColor="#7787E5"
+            android:textSize="20sp" />
+
     </RelativeLayout>
 
     <RelativeLayout

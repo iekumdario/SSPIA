@@ -12,7 +12,9 @@ public final class R {
         public static final int x_rotation=0x7f040000;
     }
     public static final class array {
-        public static final int theimages=0x7f060001;
+        public static final int campos=0x7f060001;
+        public static final int mercury=0x7f060002;
+        public static final int theimages=0x7f060003;
         public static final int theplanets=0x7f060000;
     }
     public static final class attr {
@@ -47,9 +49,9 @@ public final class R {
         public static final int content_frame=0x7f0a0006;
         public static final int drawer_layout=0x7f0a0005;
         public static final int left_drawer=0x7f0a0007;
-        public static final int main_planetimage=0x7f0a0002;
+        public static final int main_planetimage=0x7f0a0001;
         public static final int main_planetinfo=0x7f0a0004;
-        public static final int main_planetname=0x7f0a0001;
+        public static final int main_planetname=0x7f0a0002;
         public static final int menu_planetimage=0x7f0a0008;
         public static final int menu_planetname=0x7f0a0009;
         public static final int relative1=0x7f0a0003;

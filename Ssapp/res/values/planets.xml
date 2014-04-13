@@ -10,6 +10,16 @@
         <item >Neptune</item>
     </string-array>
     
+    <string-array name="campos">
+        <item >Temp_min</item>
+        <item >temp_prom</item>
+    </string-array>
+    
+    <string-array name="mercury">
+        <item >345</item>
+        <item >-98</item>
+    </string-array>
+    
     <integer-array name="theimages">
         <item >2130837509</item>
         <item >2130837513</item>

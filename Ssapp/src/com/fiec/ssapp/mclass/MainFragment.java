@@ -41,8 +41,8 @@ public class MainFragment extends Fragment {
 		this.planetname.setText(pname);
 		this.planetimage.setImageResource(pimg);
 		
-		animation = AnimationUtils.loadAnimation(act, R.anim.x_rotation);
-		this.planetimage.setAnimation(animation);
+		//animation = AnimationUtils.loadAnimation(act, R.anim.x_rotation);
+		//this.planetimage.setAnimation(animation);
 		
 		return view;
 	}
