@@ -6,5 +6,29 @@
     <string name="action_settings">Settings</string>
     <string name="drawer_open">Solar System</string>
     <string name="drawer_close"></string>
+    
+    <string-array name="fromcuriositi">
+        <item >"terrestrial_date"</item>
+        <item >"sol"</item>
+        <item >"ls"</item>
+        <item >min_temp</item>
+        <item >min_temp_fahrenheit</item>
+        <item >max_temp</item>
+        <item >max_temp_fahrenheit</item>
+        <item >pressure</item>
+        <item >pressure_string</item>
+        <item >abs_humidity</item>
+        <item >wind_speed</item>
+        <item >wind_direction</item>
+        <item >atmo_opacity</item>
+        <item >season</item>
+        <item >sunrise</item>
+        <item >sunset</item>	
+    </string-array>
+    
+    <string-array name="addmars">
+        <item >ice_recov</item>
+        <item >planet_type</item>
+    </string-array>
 
 </resources>

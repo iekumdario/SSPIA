@@ -45,8 +45,8 @@ public class SSClass implements OnItemClickListener{
 		
 		drawerToggle = new ActionBarDrawerToggle(
                 activity,               
-                maindrawer,         
-                R.drawable.ic_drawer,
+                maindrawer,R.array.mercury,         
+                /*R.drawable.ic_drawer,*/
                 R.string.drawer_open, 
                 R.string.drawer_close
                 ) {
@@ -61,7 +61,7 @@ public class SSClass implements OnItemClickListener{
             }
         };
        maindrawer.setDrawerListener(drawerToggle);
-       selectItem(0);
+       selectItem(0); 
         
 	}
 
@@ -76,6 +76,7 @@ public class SSClass implements OnItemClickListener{
 	     MainFragment fragment = new MainFragment();
 	     fragment.setact(act);
 	     fragment.setStrings(planets[position], img[position]);
+	     fragment.setPosition(position);
 	     //((BaseMenuClass) fragment).setAdapter(adapter.getItemAdapter());
 	     //fragment.setArguments(args);
 

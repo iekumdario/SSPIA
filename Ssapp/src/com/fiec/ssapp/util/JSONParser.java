@@ -52,6 +52,33 @@ public class JSONParser {
 	    }
     	return aux2;
     }
+    
+    public JSONObject makeHttpRequest(String url, String method){
+    	json = null;
+        try {
+ 
+            if(method == "GET"){
+                DefaultHttpClient httpClient = new DefaultHttpClient();
+                //String paramString = URLEncodedUtils.format(params1, "utf-8");
+                //url += "?" + paramString;
+                HttpGet httpGet = new HttpGet(url);
+ 
+                HttpResponse httpResponse = httpClient.execute(httpGet);
+                HttpEntity httpEntity = httpResponse.getEntity();
+                is = httpEntity.getContent();   
+                convertResult();  
+            }          
+            
+ 
+        } catch (UnsupportedEncodingException e) {
+        	 Log.w("Tag", e.toString());
+        } catch (ClientProtocolException e) {
+        	Log.w("Tag", e.toString());
+        } catch (IOException e) {
+        	Log.w("Tag",e.toString());
+        }
+		return sendResult();
+    }
  
     public JSONObject makeHttpRequest(String url, String method,
             List<NameValuePair> params1) {
@@ -93,8 +120,9 @@ public class JSONParser {
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
-            aux = sb.toString().replace("(", "");
-            aux2 = aux.replace(")", "");
+            aux = sb.toString();
+            aux2 = aux;
+            Log.i("gmaTag", aux2);
             is.close();
             reader.close();
            

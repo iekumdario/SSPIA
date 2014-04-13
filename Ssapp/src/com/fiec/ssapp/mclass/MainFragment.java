@@ -1,6 +1,7 @@
 package com.fiec.ssapp.mclass;
 
 import com.fiec.ssapp.R;
+import com.fiec.ssapp.buff.PlanetSource;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -20,11 +21,12 @@ public class MainFragment extends Fragment {
 	private TextView planetname;
 	private ImageView planetimage;
 	private ListView planetinfo;
-	private String[] plna;
 	private Activity act;
 	
+	private String[] dats;
+	
 	private String pname;
-	private int pimg;
+	private int pimg, position;
 	
 	private Animation animation;
 	
@@ -32,17 +34,18 @@ public class MainFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.activity_planets, null);
-		plna = new String[]{"info","info","info","info","info","info","info","info"};
 		this.planetname = (TextView)view.findViewById(R.id.main_planetname);
 		this.planetimage = (ImageView)view.findViewById(R.id.main_planetimage);
 		this.planetinfo = (ListView)view.findViewById(R.id.main_planetinfo);
-		/*this.planetinfo.setAdapter(new ArrayAdapter<String>(act,
-                R.layout.menu_lists, plna));*/
+		
+		this.dats = act.getResources().getStringArray(R.array.fromcuriositi);
+		
 		this.planetname.setText(pname);
 		this.planetimage.setImageResource(pimg);
 		
 		//animation = AnimationUtils.loadAnimation(act, R.anim.x_rotation);
 		//this.planetimage.setAnimation(animation);
+		setinfo();
 		
 		return view;
 	}
@@ -57,9 +60,19 @@ public class MainFragment extends Fragment {
 		this.act = act;
 	}
 	
+	public void setPosition(int pos){
+		this.position = pos;
+	}
+	
 	public void setStrings(String pname, int pimg){
 		this.pname = pname;
 		this.pimg = pimg;
+	}
+	
+	private void setinfo(){
+		switch(this.position){
+		case 2: new PlanetSource(act, planetinfo, dats);
+		}
 	}
 	
 }

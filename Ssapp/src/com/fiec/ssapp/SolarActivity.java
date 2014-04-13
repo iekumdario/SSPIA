@@ -1,5 +1,6 @@
 package com.fiec.ssapp;
 
+import com.fiec.ssapp.db.SolarDb;
 import com.fiec.ssapp.mclass.SSClass;
 
 import android.app.Activity;
@@ -14,6 +15,11 @@ public class SolarActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_solar);
+		
+		//SolarDb db = new SolarDb(getApplicationContext());
+		//db.open();
+		//db.close();
+		
 		new SSClass(this);
 	}
 

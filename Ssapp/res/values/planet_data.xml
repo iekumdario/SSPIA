@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="fields">
+        <item>temp_min</item>
+        <item>temp_med</item>
+        <item>temp_max</item>
+        <item>ice_cov</item>
+        <item>surface</item>
+    </string-array>
+    
+    <string-array name="mercury">
+        <item>-426.85</item>
+        <item>66.85</item>
+        <item>-173.15</item>
+        <item>no</item>
+        <item>rocky with craters</item>
+    </string-array>
+
+    <string-array name="venus">
+        <item>null</item>
+        <item>463.85</item>
+        <item>null</item>
+        <item>no</item>
+        <item>rocky desert with craters</item>
+    </string-array>
+
+    <string-array name="moon">
+        <item>116.85</item>
+        <item>-53.15</item>
+        <item>-173.15</item>
+        <item>no</item>
+        <item>rocky with craters</item>
+    </string-array>
+
+    <string-array name="mars">
+        <item>35</item>
+        <item>-63</item>
+        <item>-143</item>
+        <item>no</item>
+        <item>rocky</item>
+    </string-array>
+
+    <string-array name="deimos">
+        <item>null</item>
+        <item>-40</item>
+        <item>null</item>
+        <item>no</item>
+        <item>rocky</item>
+    </string-array>
+
+    <string-array name="phobos">
+        <item>null</item>
+        <item>-40</item>
+        <item>null</item>
+        <item>no</item>
+        <item>rocky</item>
+    </string-array>
+
+    <string-array name="jupiter">
+        <item>-163</item>
+        <item>-121</item>
+        <item>-75</item>
+        <item>no</item>
+        <item>gaseous</item>
+    </string-array>
+
+    <string-array name="io">
+        <item>null</item>
+        <item>-143.15</item>
+        <item>null</item>
+        <item>no</item>
+        <item>rocky with volcanoes</item>
+    </string-array>
+
+    <string-array name="europa">
+        <item>-163</item>
+        <item>null</item>
+        <item>-223</item>
+        <item>yes</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="ganimedes">
+        <item>null</item>
+        <item>-160</item>
+        <item>null</item>
+        <item>yes</item>
+        <item>rocky and icy</item>
+    </string-array>
+
+    <string-array name="callisto">
+        <item>-108</item>
+        <item>-139</item>
+        <item>-193</item>
+        <item>yes</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="saturn">
+        <item>-139</item>
+        <item>null</item>
+        <item>-193</item>
+        <item>no</item>
+        <item>rocky and icy</item>
+    </string-array>
+
+    <string-array name="mimas">
+        <item>null</item>
+        <item>-209</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="enceladus">
+        <item>-128</item>
+        <item>-198</item>
+        <item>-240</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="tethys">
+        <item>null</item>
+        <item>-187</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="dione">
+        <item>null</item>
+        <item>-186</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="rhea">
+        <item>-174</item>
+        <item>null</item>
+        <item>-220</item>
+        <item>yes</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="titan">
+        <item>null</item>
+        <item>-179.5</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="lapetus">
+        <item>-143</item>
+        <item>null</item>
+        <item>-183</item>
+        <item>yes</item>
+        <item>ice and rock covered by gas</item>
+    </string-array>
+
+    <string-array name="uranus">
+        <item>-205.2</item>
+        <item>null</item>
+        <item>-224</item>
+        <item>no</item>
+        <item>mostly icy</item>
+    </string-array>
+
+    <string-array name="titania">
+        <item>null</item>
+        <item>-203</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="oberon">
+        <item>null</item>
+        <item>-193</item>
+        <item>null</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="umbriel">
+        <item>-188</item>
+        <item>null</item>
+        <item>-198</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="ariel">
+        <item>-188</item>
+        <item>null</item>
+        <item>-213</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="miranda">
+        <item>-188</item>
+        <item>null</item>
+        <item>-213</item>
+        <item>partial</item>
+        <item>rocky and icy with craters</item>
+    </string-array>
+
+    <string-array name="neptune">
+        <item>-220</item>
+        <item>null</item>
+        <item>-221</item>
+        <item>no</item>
+        <item>gaseous</item>
+    </string-array>
+
+    <string-array name="triton">
+        <item>null</item>
+        <item>-235</item>
+        <item>null</item>
+        <item>yes</item>
+        <item>gaseous with ice core</item>
+    </string-array>
+</resources>

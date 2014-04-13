@@ -12,10 +12,39 @@ public final class R {
         public static final int x_rotation=0x7f040000;
     }
     public static final class array {
-        public static final int campos=0x7f060001;
-        public static final int mercury=0x7f060002;
-        public static final int theimages=0x7f060003;
-        public static final int theplanets=0x7f060000;
+        public static final int addmars=0x7f060020;
+        public static final int ariel=0x7f060018;
+        public static final int callisto=0x7f06000b;
+        public static final int deimos=0x7f060005;
+        public static final int dione=0x7f060010;
+        public static final int enceladus=0x7f06000e;
+        public static final int europa=0x7f060009;
+        public static final int fields=0x7f060000;
+        public static final int fromcuriositi=0x7f06001f;
+        public static final int ganimedes=0x7f06000a;
+        public static final int io=0x7f060008;
+        public static final int jupiter=0x7f060007;
+        public static final int lapetus=0x7f060013;
+        public static final int mars=0x7f060004;
+        public static final int mercury=0x7f060001;
+        public static final int mimas=0x7f06000d;
+        public static final int miranda=0x7f060019;
+        public static final int moon=0x7f060003;
+        public static final int neptune=0x7f06001a;
+        public static final int oberon=0x7f060016;
+        public static final int phobos=0x7f060006;
+        public static final int planetscode=0x7f06001e;
+        public static final int rhea=0x7f060011;
+        public static final int saturn=0x7f06000c;
+        public static final int tethys=0x7f06000f;
+        public static final int theimages=0x7f06001d;
+        public static final int theplanets=0x7f06001c;
+        public static final int titan=0x7f060012;
+        public static final int titania=0x7f060015;
+        public static final int triton=0x7f06001b;
+        public static final int umbriel=0x7f060017;
+        public static final int uranus=0x7f060014;
+        public static final int venus=0x7f060002;
     }
     public static final class attr {
     }
@@ -45,22 +74,25 @@ public final class R {
         public static final int x_universe=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000a;
+        public static final int action_settings=0x7f0a000c;
         public static final int content_frame=0x7f0a0006;
         public static final int drawer_layout=0x7f0a0005;
         public static final int left_drawer=0x7f0a0007;
         public static final int main_planetimage=0x7f0a0001;
         public static final int main_planetinfo=0x7f0a0004;
         public static final int main_planetname=0x7f0a0002;
-        public static final int menu_planetimage=0x7f0a0008;
-        public static final int menu_planetname=0x7f0a0009;
+        public static final int menu_info_res=0x7f0a0009;
+        public static final int menu_info_tags=0x7f0a0008;
+        public static final int menu_planetimage=0x7f0a000a;
+        public static final int menu_planetname=0x7f0a000b;
         public static final int relative1=0x7f0a0003;
         public static final int relative2=0x7f0a0000;
     }
     public static final class layout {
         public static final int activity_planets=0x7f030000;
         public static final int activity_solar=0x7f030001;
-        public static final int menu_lists=0x7f030002;
+        public static final int info_list=0x7f030002;
+        public static final int menu_lists=0x7f030003;
     }
     public static final class menu {
         public static final int solar=0x7f090000;
