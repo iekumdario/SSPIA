@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ssapp</string>
+    <string name="title_app">Solar System App</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Solar System</string>
+    <string name="drawer_close"></string>
+
+</resources>
