@@ -45,10 +45,10 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		int id;
 		db.open();
 		id = db.getIdbyPname(pname);
-		//Log.i("gmaTag", "Pos2 = "+id+" name = "+pname);
 		String[] res = db.getDetails(id);
 		dats = act.getResources().getStringArray(R.array.fields);
-		db.update(id, res[0], res[2], res[1]);
+		db.updatetemp(id, res[0], res[2], res[1]);
+		res = db.getDetails(id);
 		adapter = new CustomInfoAdapter(act, res, dats);
 		info.setAdapter(adapter);
 		temp.setText(res[1]);
@@ -76,7 +76,10 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 			//info.setAdapter(adapter);
 			db = new SolarDb(act.getApplicationContext());
 			db.open();
-			db.update(3, res[1], res[3], res[2]);
+			//3min,5max
+			db.updatetemp(4, res[5], res[3], "null");
+			//db.updatetemp(3, res[1], res[3], res[2]); original
+			//db.updatetemp(3, res[0], res[2], res[1]);
 			db.close();
 		}
 	}
