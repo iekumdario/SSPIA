@@ -30,34 +30,10 @@
         <item>2131099655</item>
         <item>2131099660</item>
         <item>2131099668</item>
-        <item>2131099674</item>      
-<<<<<<< HEAD
+        <item>2131099674</item> 
     </integer-array>
-    
-    <integer-array name="satcode">
-        <item>2131099653</item><!-- mars -->
-        <item>2131099654</item>
-        <item>2131099656</item><!-- jupiter -->
-        <item>2131099657</item> 
-        <item>2131099658</item>
-        <item>2131099659</item>
-        <item>2131099661</item><!-- saturn -->
-        <item>2131099662</item>
-        <item>2131099662</item>
-        <item>2131099664</item>
-        <item>2131099665</item>
-        <item>2131099666</item>
-        <item>2131099667</item>
-        <item>2131099669</item><!-- uranus -->
-        <item>2131099670</item>
-        <item>2131099671</item>
-        <item>2131099672</item>
-        <item>2131099673</item>
-        <item>2131099675</item><!-- neptune -->
-=======
->>>>>>> 2fdfd745073ba91e72b4b13174d2fa0c8960bcbf
-    </integer-array>
-    
+
+        
     <integer-array name="satcode">
         <item>2131099653</item><!-- mars -->
         <item>2131099654</item>
