@@ -29,7 +29,7 @@
             android:layout_alignParentTop="true"
             android:text="28c"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#96BEFF"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="50sp"
             />
             <!-- android:visibility="invisible" --> 
@@ -41,7 +41,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:text="SOL"
-            android:textColor="#7787E5"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="35sp" />
 
     </RelativeLayout>
