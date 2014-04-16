@@ -48,7 +48,7 @@ public class DBHelper extends SQLiteOpenHelper{
 			IDPLANET+"))";
 	
 	public static final String DB_CREATE3 = "create table "+TABLEDETALLE+"("+IDDETALLE+
-			" integer primary key autoincrement, "+TEMP_MIN+" text, "+TEMP_MED+" text, "+TEMPMAX+" text, "+
+			" integer primary key autoincrement, "+TEMPMAX+" text, "+TEMP_MED+" text, "+TEMP_MIN+" text, "+
 			ICECOVER+" text, "+SURFACE+" text, "+MASS+" text, "+DIAMETER+" text, "+
 			MEAN_DEN+" text, "+SCAP_VEL+" text, "+AVDIS+" text, "+ROTPER+" text, "+
 			OBLIQUITI+" text, "+ORBIT+" text, "+ORBIT_ECC+" text)";

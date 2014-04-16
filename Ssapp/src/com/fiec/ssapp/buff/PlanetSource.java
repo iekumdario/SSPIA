@@ -47,11 +47,11 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		id = db.getIdbyPname(pname);
 		String[] res = db.getDetails(id);
 		dats = act.getResources().getStringArray(R.array.fields);
-		db.updatetemp(id, res[0], res[2], res[1]);
+		db.updatetemp(id, res[0], res[1], res[2]);
 		res = db.getDetails(id);
 		adapter = new CustomInfoAdapter(act, res, dats);
 		info.setAdapter(adapter);
-		temp.setText(res[1]);
+		temp.setText(res[1]+"°C");
 		db.close();
 		
 	}
@@ -77,9 +77,8 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 			db = new SolarDb(act.getApplicationContext());
 			db.open();
 			//3min,5max
-			db.updatetemp(4, res[5], res[3], "null");
+			db.updatetemp(4, res[5], "null", res[3]);
 			//db.updatetemp(3, res[1], res[3], res[2]); original
-			//db.updatetemp(3, res[0], res[2], res[1]);
 			db.close();
 		}
 	}
