@@ -64,23 +64,45 @@ public final class R {
     }
     public static final class drawable {
         public static final int drawer_shadow=0x7f020000;
-        public static final int ic_drawer=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int jupiter=0x7f020003;
-        public static final int mars=0x7f020004;
-        public static final int mercury=0x7f020005;
-        public static final int moon=0x7f020006;
-        public static final int neptuno=0x7f020007;
-        public static final int saturno=0x7f020008;
-        public static final int urano=0x7f020009;
-        public static final int venus=0x7f02000a;
-        public static final int x_customselector=0x7f02000b;
-        public static final int x_customtextfield=0x7f02000c;
-        public static final int x_universe=0x7f02000d;
-        public static final int xz_ic_launcher=0x7f02000e;
+        public static final int ic_action_overflow=0x7f020001;
+        public static final int ic_drawer=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int jupiter=0x7f020004;
+        public static final int mars=0x7f020005;
+        public static final int mercury=0x7f020006;
+        public static final int moon=0x7f020007;
+        public static final int neptuno=0x7f020008;
+        public static final int saturno=0x7f020009;
+        public static final int urano=0x7f02000a;
+        public static final int venus=0x7f02000b;
+        public static final int x_customselector=0x7f02000c;
+        public static final int x_customtextfield=0x7f02000d;
+        public static final int x_moon_ariel=0x7f02000e;
+        public static final int x_moon_callisto=0x7f02000f;
+        public static final int x_moon_deimos=0x7f020010;
+        public static final int x_moon_dione=0x7f020011;
+        public static final int x_moon_enceladus=0x7f020012;
+        public static final int x_moon_europa=0x7f020013;
+        public static final int x_moon_ganimedes=0x7f020014;
+        public static final int x_moon_iapetus=0x7f020015;
+        public static final int x_moon_io=0x7f020016;
+        public static final int x_moon_mimas=0x7f020017;
+        public static final int x_moon_miranda=0x7f020018;
+        public static final int x_moon_oberon=0x7f020019;
+        public static final int x_moon_phobos=0x7f02001a;
+        public static final int x_moon_rhea=0x7f02001b;
+        public static final int x_moon_tethys=0x7f02001c;
+        public static final int x_moon_titan=0x7f02001d;
+        public static final int x_moon_titania=0x7f02001e;
+        public static final int x_moon_triton=0x7f02001f;
+        public static final int x_moon_umbriel=0x7f020020;
+        public static final int x_universe=0x7f020021;
+        public static final int xz_ic_launcher=0x7f020022;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0013;
+        public static final int actionbar_menu=0x7f0a000a;
+        public static final int actionbar_title=0x7f0a0000;
         public static final int checkBox1=0x7f0a000e;
         public static final int content_frame=0x7f0a0008;
         public static final int drawer_layout=0x7f0a0007;
@@ -95,10 +117,8 @@ public final class R {
         public static final int menu_info_tags=0x7f0a000f;
         public static final int menu_planetimage=0x7f0a0011;
         public static final int menu_planetname=0x7f0a0012;
-        public static final int rangebutton=0x7f0a000a;
         public static final int relative2=0x7f0a0001;
         public static final int tempmed=0x7f0a0003;
-        public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a000d;
     }
     public static final class layout {

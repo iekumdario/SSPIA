@@ -1,5 +1,7 @@
 package com.fiec.sspia;
 
+import java.lang.reflect.Field;
+
 import com.fiec.ssapp.R;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.mclass.SSClass;
@@ -8,42 +10,27 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewConfiguration;
 
-public class SolarActivity extends Activity {
+public class SolarActivity extends Activity{
 	SolarDb db;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);		
 		setContentView(R.layout.activity_solar);
-		
-		db = new SolarDb(getApplicationContext());
-		
-		if(firstini() == true){
-			String[] planets = this.getResources().getStringArray(R.array.theplanets);
-			int[] inits = this.getResources().getIntArray(R.array.planetscode);
-			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
-			String[] dats;
-			db.open();
-			db.createPlanets(planets);
-			for(int i=0; i<inits.length; i++){
-				dats = this.getResources().getStringArray(inits[i]);
-				db.create(dats);
-			}
-			for(int i=0; i<inits2.length; i++){
-				dats = this.getResources().getStringArray(inits2[i]);
-				db.create(dats);
-			}
-			
-			db.close();
-		}
+		setSettings();		
+		initialize();		
 		
 		new SSClass(this);
-	}
+	}	
 
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.solar, menu);
+        return true;
     }
 
     @Override
@@ -82,5 +69,42 @@ public class SolarActivity extends Activity {
 		db.close();
 		return false;		
     }
+    
+    private void initialize() {
+		db = new SolarDb(getApplicationContext());
+		
+		if(firstini() == true){
+			String[] planets = this.getResources().getStringArray(R.array.theplanets);
+			int[] inits = this.getResources().getIntArray(R.array.planetscode);
+			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
+			String[] dats;
+			db.open();
+			db.createPlanets(planets);
+			for(int i=0; i<inits.length; i++){
+				dats = this.getResources().getStringArray(inits[i]);
+				db.create(dats);
+			}
+			for(int i=0; i<inits2.length; i++){
+				dats = this.getResources().getStringArray(inits2[i]);
+				db.create(dats);
+			}
+			
+			db.close();
+		}	
+		
+	}
+
+	public void setSettings() {
+		try {
+	        ViewConfiguration config = ViewConfiguration.get(this);
+	        Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+	        if(menuKeyField != null) {
+	            menuKeyField.setAccessible(true);
+	            menuKeyField.setBoolean(config, false);
+	        }
+	    } catch (Exception ex) {
+	        // Ignore
+	    }		
+	}
 
 }

@@ -35,17 +35,17 @@ public class SSClass implements OnItemClickListener, OnClickListener{
 		this.act = activity;
 		
 		
-		activity.getActionBar().setCustomView(R.layout.customactionbar);
-		//activity.getActionBar().setHomeButtonEnabled(true);
-        activity.getActionBar().setTitle(R.string.title_app);
+		//activity.getActionBar().setCustomView(R.layout.customactionbar);
+		//activity.getActionBar().setHomeButtonEnabled(true);        
         activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
                 | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         activity.getActionBar().setDisplayHomeAsUpEnabled(true);
+        activity.getActionBar().setDisplayShowTitleEnabled(true);
         
         this.planets = activity.getResources().getStringArray(R.array.theplanets);
         this.img = activity.getResources().getIntArray(R.array.theimages);
-        this.boton = (ImageButton)activity.findViewById(R.id.rangebutton);
-        this.boton.setOnClickListener(this);
+        //this.boton = (ImageButton)activity.findViewById(R.id.rangebutton);
+        //this.boton.setOnClickListener(this);
         this.adapter = new FillMenuAdapter(activity, planets, img);
         this.maindrawer = (DrawerLayout)activity.findViewById(R.id.drawer_layout);
         this.maindrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);        
