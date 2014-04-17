@@ -1,9 +1,9 @@
-package com.fiec.ssapp.util;
+package com.fiec.sspia.util;
 
 import java.util.List;
 
-import com.fiec.ssapp.buff.PlanetClass;
 import com.fiec.ssapp.R;
+import com.fiec.sspia.buff.PlanetClass;
 
 import android.content.Context;
 import android.view.LayoutInflater;

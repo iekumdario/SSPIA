@@ -1,4 +1,4 @@
-package com.fiec.ssapp.util;
+package com.fiec.sspia.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import android.content.Context;
 import android.util.Log;
 
-import com.fiec.ssapp.buff.PlanetClass;
+import com.fiec.sspia.buff.PlanetClass;
 
 public class FillMenuAdapter {
 	

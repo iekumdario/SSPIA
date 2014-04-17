@@ -1,4 +1,4 @@
-package com.fiec.ssapp.db;
+package com.fiec.sspia.db;
 
 import android.content.ContentValues;
 import android.content.Context;

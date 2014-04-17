@@ -1,4 +1,4 @@
-package com.fiec.ssapp.buff;
+package com.fiec.sspia.buff;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fiec.ssapp.R;
-import com.fiec.ssapp.db.SolarDb;
-import com.fiec.ssapp.util.CustomInfoAdapter;
-import com.fiec.ssapp.util.JSONParser;
+import com.fiec.sspia.db.SolarDb;
+import com.fiec.sspia.util.CustomInfoAdapter;
+import com.fiec.sspia.util.JSONParser;
 
 public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 	

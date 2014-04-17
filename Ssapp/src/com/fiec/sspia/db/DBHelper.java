@@ -1,4 +1,4 @@
-package com.fiec.ssapp.db;
+package com.fiec.sspia.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

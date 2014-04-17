@@ -41,7 +41,8 @@
             android:layout_alignParentTop="true"
             android:text="SOL"
             android:textColor="#7787E5"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 

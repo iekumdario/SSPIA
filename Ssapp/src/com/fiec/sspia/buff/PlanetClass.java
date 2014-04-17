@@ -1,4 +1,4 @@
-package com.fiec.ssapp.buff;
+package com.fiec.sspia.buff;
 
 public class PlanetClass {
 

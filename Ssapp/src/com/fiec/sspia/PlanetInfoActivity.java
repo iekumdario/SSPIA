@@ -1,4 +1,6 @@
-package com.fiec.ssapp;
+package com.fiec.sspia;
+
+import com.fiec.ssapp.R;
 
 import android.app.Activity;
 import android.os.Bundle;

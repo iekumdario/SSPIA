@@ -1,7 +1,8 @@
-package com.fiec.ssapp;
+package com.fiec.sspia;
 
-import com.fiec.ssapp.db.SolarDb;
-import com.fiec.ssapp.mclass.SSClass;
+import com.fiec.ssapp.R;
+import com.fiec.sspia.db.SolarDb;
+import com.fiec.sspia.mclass.SSClass;
 
 import android.app.Activity;
 import android.content.res.Configuration;

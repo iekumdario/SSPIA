@@ -6,6 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="drawer_open">Solar System</string>
     <string name="drawer_close"></string>
+    <string name="defaulttype">default</string>
+    <string name="customtype">custom</string>
     
     <string-array name="fromcuriositi">
         <item >"terrestrial_date"</item>

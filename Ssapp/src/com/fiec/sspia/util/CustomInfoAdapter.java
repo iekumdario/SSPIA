@@ -1,4 +1,4 @@
-package com.fiec.ssapp.util;
+package com.fiec.sspia.util;
 
 import com.fiec.ssapp.R;
 

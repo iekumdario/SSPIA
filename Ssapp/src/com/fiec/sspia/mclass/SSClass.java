@@ -1,22 +1,19 @@
-package com.fiec.ssapp.mclass;
+package com.fiec.sspia.mclass;
 
 import com.fiec.ssapp.R;
-import com.fiec.ssapp.util.FillMenuAdapter;
+import com.fiec.sspia.util.FillMenuAdapter;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -42,7 +39,7 @@ public class SSClass implements OnItemClickListener, OnClickListener{
 		//activity.getActionBar().setHomeButtonEnabled(true);
         activity.getActionBar().setTitle(R.string.title_app);
         activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
-                | ActionBar.DISPLAY_SHOW_HOME);
+                | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         activity.getActionBar().setDisplayHomeAsUpEnabled(true);
         
         this.planets = activity.getResources().getStringArray(R.array.theplanets);
@@ -82,23 +79,17 @@ public class SSClass implements OnItemClickListener, OnClickListener{
 		selectItem(position);
 	}
 	
-	private void selectItem(int position) {		
-		Log.i("gmaTag", "Pos1 = "+position);
-	     //Bundle args = new Bundle();
-	     //args.putCharSequence(BaseMenuClass.ARG_TXT, "Inicio");
-	     MainFragment fragment = new MainFragment();
-	     fragment.setact(act);
-	     fragment.setStrings(planets[position], img[position]);
-	     fragment.setPosition(position);
-	     //((BaseMenuClass) fragment).setAdapter(adapter.getItemAdapter());
-	     //fragment.setArguments(args);
+	private void selectItem(int position) {
+		MainFragment fragment = new MainFragment();
+	    fragment.setact(act);
+	    fragment.setStrings(planets[position], img[position]);
+	    fragment.setPosition(position);
 
-	     FragmentManager fragmentManager = act.getFragmentManager();
-	     fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+	    FragmentManager fragmentManager = act.getFragmentManager();
+	    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-	     drawerList.setItemChecked(position, true);
-	     //setTitle("Inicio");
-	     maindrawer.closeDrawer(drawerList);		
+	    drawerList.setItemChecked(position, true);
+	    maindrawer.closeDrawer(drawerList);		
 	}
 
 	@Override

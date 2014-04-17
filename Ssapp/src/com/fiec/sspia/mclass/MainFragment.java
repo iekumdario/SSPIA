@@ -1,9 +1,9 @@
-package com.fiec.ssapp.mclass;
+package com.fiec.sspia.mclass;
 
-import com.fiec.ssapp.PlanetInfoActivity;
 import com.fiec.ssapp.R;
-import com.fiec.ssapp.SatelliteActivity;
-import com.fiec.ssapp.buff.PlanetSource;
+import com.fiec.sspia.PlanetInfoActivity;
+import com.fiec.sspia.SatelliteActivity;
+import com.fiec.sspia.buff.PlanetSource;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -45,14 +45,13 @@ public class MainFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.activity_planets, null);
-		this.planetname = (TextView)view.findViewById(R.id.main_planetnam);
+		//this.planetname = (TextView)view.findViewById(R.id.main_planetnam);
 		this.planetimage = (ImageView)view.findViewById(R.id.main_planetimage);
 		this.planetinfo = (ListView)view.findViewById(R.id.main_planetinfo);
 		this.dats = act.getResources().getStringArray(R.array.fromcuriositi);
-		this.planetname.setText(pname);
+		//this.planetname.setText(pname);
 		this.planetimage.setImageResource(pimg);
 		this.temp = (TextView)view.findViewById(R.id.tempmed);
-		//tabs = (TabHost)
 		
 		setinfo();
 		
@@ -79,6 +78,7 @@ public class MainFragment extends Fragment{
 	}
 	
 	private void setinfo(){		
+		act.getActionBar().setTitle(pname);
 		new PlanetSource(act, planetinfo, pname, temp);
 		switch(this.position){
 		case 3: new PlanetSource(act, planetinfo, dats); break;
