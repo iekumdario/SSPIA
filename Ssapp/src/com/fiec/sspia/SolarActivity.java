@@ -9,6 +9,7 @@ import com.fiec.sspia.mclass.SSClass;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -76,12 +77,15 @@ public class SolarActivity extends Activity{
 		if(firstini() == true){
 			String[] planets = this.getResources().getStringArray(R.array.theplanets);
 			int[] inits = this.getResources().getIntArray(R.array.planetscode);
+			Log.w("gmaTag", "inits="+inits.length);
 			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
+			Log.w("gmaTag", "inits2="+inits2.length);
 			String[] dats;
 			db.open();
 			db.createPlanets(planets);
 			for(int i=0; i<inits.length; i++){
 				dats = this.getResources().getStringArray(inits[i]);
+				Log.w("gmaTag", "dats = " +dats[i]);
 				db.create(dats);
 			}
 			for(int i=0; i<inits2.length; i++){

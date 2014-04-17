@@ -31,7 +31,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/holo_blue_light"
             android:textSize="50sp"
-            />
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/main_planetnam"
@@ -41,7 +41,9 @@
             android:layout_alignParentTop="true"
             android:text="SOL"
             android:textColor="@android:color/holo_blue_bright"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+            android:visibility="invisible" />
+
     </RelativeLayout>
 
     	<ListView

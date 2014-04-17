@@ -39,7 +39,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		this.execute();
 	}
 	
-	public PlanetSource(Activity act, ListView info, String pname, TextView temp){
+	public PlanetSource(Activity act, ListView info, String pname){
 		db = new SolarDb(act.getApplicationContext());
 		
 		int id;
@@ -51,7 +51,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		res = db.getDetails(id);
 		adapter = new CustomInfoAdapter(act, res, dats);
 		info.setAdapter(adapter);
-		temp.setText(res[1]+"°C");
+		//temp.setText(res[1]+"°C");
 		db.close();
 		
 	}
