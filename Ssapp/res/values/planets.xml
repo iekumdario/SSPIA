@@ -32,7 +32,8 @@
         <item>2131099668</item>
         <item>2131099674</item>
     </integer-array>
-    
+
+        
     <integer-array name="satcode">
         <item>2131099653</item><!-- mars -->
         <item>2131099654</item>

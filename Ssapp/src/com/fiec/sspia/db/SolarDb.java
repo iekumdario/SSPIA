@@ -14,8 +14,8 @@ public class SolarDb {
 		
 		private String[] allColumns_planet = {DBHelper.IDPLANET, DBHelper.NAME,
 				DBHelper.IDDETALLE};
-		private String[] allColumns_detail = {DBHelper.TEMP_MIN, 
-				 DBHelper.TEMP_MED,	DBHelper.TEMPMAX, DBHelper.ICECOVER, DBHelper.SURFACE, DBHelper.MASS,
+		private String[] allColumns_detail = {DBHelper.TEMPMAX, 
+				 DBHelper.TEMP_MED,	DBHelper.TEMP_MIN, DBHelper.ICECOVER, DBHelper.SURFACE, DBHelper.MASS,
 				DBHelper.DIAMETER, DBHelper.MEAN_DEN, DBHelper.SCAP_VEL, DBHelper.AVDIS,
 				DBHelper.ROTPER, DBHelper.OBLIQUITI, DBHelper.ORBIT, DBHelper.ORBIT_ECC};
 		
@@ -36,16 +36,14 @@ public class SolarDb {
 			dbhelper.close();
 		}
 		
-		public boolean update(int id, String max, String min, String med){
+		public boolean updatetemp(int id, String max, String med, String min){
+			Log.w("gmaTag", "id:"+id+" max:"+max+" med:"+med+" min:"+min);
 			double medi = 0;
-			Log.w("gmaTag", "med = "+med);
-			if(med.compareTo("null")==0)
-				//Log.w("gmaTag", "mas = "+max+" min = " +min+ "xD = "+(Double.parseDouble(max)+Double.parseDouble(min)/2));
+			if(med.compareTo("null")==0 || med.compareTo("0.0")==0){
 				medi = (Double.parseDouble(max)+Double.parseDouble(min))/2;
-				db.execSQL("update "+DBHelper.TABLEDETALLE+" set "+DBHelper.TEMP_MIN+"='"+
-					min+"', "+DBHelper.TEMP_MED+"='"+medi+"',"+DBHelper.TEMPMAX+"='"+max+"' where "+DBHelper.IDDETALLE+"="+(id+1));
-			//}
-			
+				db.execSQL("update "+DBHelper.TABLEDETALLE+" set "+DBHelper.TEMPMAX+"='"+
+						max+"', "+DBHelper.TEMP_MED+"='"+medi+"',"+DBHelper.TEMP_MIN+"='"+min+"' where "+DBHelper.IDDETALLE+"="+id+";");
+			}	
 			return true;
 		}
 		
@@ -83,6 +81,7 @@ public class SolarDb {
 			cursor.move(id);
 			for(int k=0; k<14; k++){
 				aux[k] = cursor.getString(k);
+				Log.w("gmaTag", aux[k]);
 				//Log.w("gmaTag", "aux = "+aux[k]);
 			}
 			/*while(!cursor.isAfterLast()){
