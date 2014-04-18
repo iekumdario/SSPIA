@@ -10,6 +10,10 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textColor="#7A77FF"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
         android:textSize="16sp" />
 
     <TextView
@@ -21,6 +25,10 @@
         android:gravity="right"
         android:text="TextView"
         android:textColor="#C6DAFF"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
         android:textSize="14sp" />
 
 </LinearLayout>

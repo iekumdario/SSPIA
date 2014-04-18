@@ -12,7 +12,7 @@ public final class R {
         public static final int x_rotation=0x7f040000;
     }
     public static final class array {
-        public static final int addmars=0x7f060021;
+        public static final int addmars=0x7f060023;
         public static final int ariel=0x7f060018;
         public static final int callisto=0x7f06000b;
         public static final int deimos=0x7f060005;
@@ -20,7 +20,7 @@ public final class R {
         public static final int enceladus=0x7f06000e;
         public static final int europa=0x7f060009;
         public static final int fields=0x7f060000;
-        public static final int fromcuriositi=0x7f060020;
+        public static final int fromcuriositi=0x7f060022;
         public static final int ganimedes=0x7f06000a;
         public static final int io=0x7f060008;
         public static final int jupiter=0x7f060007;
@@ -33,14 +33,16 @@ public final class R {
         public static final int neptune=0x7f06001a;
         public static final int oberon=0x7f060016;
         public static final int phobos=0x7f060006;
-        public static final int planetscode=0x7f06001e;
+        public static final int planetscode=0x7f060020;
         public static final int rhea=0x7f060011;
         /**  neptune 
          */
-        public static final int satcode=0x7f06001f;
+        public static final int satcode=0x7f060021;
+        public static final int satelliteplanet=0x7f06001e;
+        public static final int satellites=0x7f06001d;
         public static final int saturn=0x7f06000c;
         public static final int tethys=0x7f06000f;
-        public static final int theimages=0x7f06001d;
+        public static final int theimages=0x7f06001f;
         public static final int theplanets=0x7f06001c;
         public static final int titan=0x7f060012;
         public static final int titania=0x7f060015;
