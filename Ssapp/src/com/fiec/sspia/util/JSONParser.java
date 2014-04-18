@@ -122,7 +122,7 @@ public class JSONParser {
             }
             aux = sb.toString();
             aux2 = aux;
-            Log.i("gmaTag", aux2);
+            //Log.i("gmaTag", aux2);
             is.close();
             reader.close();
            

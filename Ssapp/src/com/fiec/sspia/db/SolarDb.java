@@ -129,8 +129,11 @@ public class SolarDb {
 				new String[] { DBHelper.IDLUNA }, DBHelper.IDPLANET + "="
 						+ PlanetId, null, null, null, null);
 		int[] satellites = new int[cursor.getCount()];
-		for (int i = 0; i < cursor.getCount(); i++)
+		cursor.moveToFirst();
+		for (int i = 0; i < cursor.getCount(); i++){
 			satellites[i] = cursor.getInt(0);
+			cursor.moveToNext();
+		}
 		cursor.close();
 		return satellites;
 	}

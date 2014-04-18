@@ -35,7 +35,6 @@ public class InformationTab extends Fragment {
 	}
 	
 	public void setParams(){
-		Log.w("gmaTag", "bundle : "+TabsPlanets.pname+"  "+TabsPlanets.pos);
 		act = TabsPlanets.act;
 		pname = TabsPlanets.pname;
 		position = TabsPlanets.pos;
@@ -47,8 +46,7 @@ public class InformationTab extends Fragment {
 		switch(position){
 		case 3:
 			this.dats = act.getResources().getStringArray(R.array.fromcuriositi);
-			new PlanetSource(act, planetinfo, dats); break;
+			new PlanetSource(act, dats); break;
 		}
-		Log.w("gmaTag", "pasa8");
 	}
 }

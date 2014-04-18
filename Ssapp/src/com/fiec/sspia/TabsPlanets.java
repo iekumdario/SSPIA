@@ -1,6 +1,7 @@
 package com.fiec.sspia;
 
 import com.fiec.ssapp.R;
+import com.fiec.sspia.db.SolarDb;
 
 import android.R.color;
 import android.support.v4.app.Fragment;
@@ -30,9 +31,9 @@ public class TabsPlanets{
 	public boolean addTabs(){		
 		th.addTab(th.newTabSpec("tab1").setIndicator(customTab("Information")),
 				InformationTab.class, null);
-		
-		th.addTab(th.newTabSpec("tab2").setIndicator(customTab("Satellites")),
-				SatellitesClass.class, null);
+		if(getSatCount() >= 1)
+			th.addTab(th.newTabSpec("tab2").setIndicator(customTab("Satellites")),
+					SatellitesClass.class, null);
 		return true;
 	}
 	
@@ -41,6 +42,15 @@ public class TabsPlanets{
 		TextView tv = (TextView)view.findViewById(R.id.tabedita1);
 		tv.setText(arsg);
 		return view;
+	}
+	
+	private int getSatCount(){
+		SolarDb db = new SolarDb(act);
+		int a;
+		db.open();
+		a = db.getSatellitesByPlanetId(db.getIdbyPname(pname)).length;
+		db.close();
+		return a;
 	}
 
 }

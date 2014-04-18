@@ -9,6 +9,8 @@
     <string name="defaulttype">default</string>
     <string name="customtype">custom</string>
     
+    <string name="sat_infotab">Notable Satellites</string>
+    
     <string-array name="fromcuriositi">
         <item >"terrestrial_date"</item>
         <item >"sol"</item>

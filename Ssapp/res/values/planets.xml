@@ -24,7 +24,7 @@
         <item>Dione</item>
         <item>Rhea</item>
         <item>Titan</item>
-        <item>Lapetus</item>
+        <item>Iapetus</item>
         <item>Titania</item>
         <item>Oberon</item>
         <item>Umbriel</item>
@@ -98,27 +98,28 @@
         <item>2131099672</item>
         <item>2131099673</item>
         <item>2131099675</item><!-- neptune -->
-   </integer-array>
+   </integer-array>    
+   
     <integer-array name="satellitesimg">
-        <!--x_moon_ariel--><item>2130837518</item>
-		<!--x_moon_callisto--><item>2130837519</item>
-		<!--x_moon_deimos--><item>2130837520</item>
-		<!--x_moon_dione--><item>2130837521</item>
-		<!--x_moon_enceladus--><item>2130837522</item>
-		<!--x_moon_europa--><item>2130837523</item>
+        <!--x_moon_deimos--><item>2130837520</item>
+        <!--x_moon_phobos--><item>2130837530</item>
+        <!--x_moon_io--><item>2130837526</item>
+        <!--x_moon_europa--><item>2130837523</item>
 		<!--x_moon_ganimedes--><item>2130837524</item>
-		<!--x_moon_iapetus--><item>2130837525</item>
-		<!--x_moon_io--><item>2130837526</item>
-		<!--x_moon_mimas--><item>21308375207</item>
-		<!--x_moon_miranda--><item>2130837528</item>
-		<!--x_moon_oberon--><item>2130837529</item>
-		<!--x_moon_phobos--><item>2130837530</item>
-		<!--x_moon_rhea--><item>2130837531</item>
+		<!--x_moon_callisto--><item>2130837519</item>
+		<!--x_moon_mimas--><item>2130837527</item>
+		<!--x_moon_enceladus--><item>2130837522</item>
 		<!--x_moon_tethys--><item>2130837532</item>
+		<!--x_moon_dione--><item>2130837521</item>
+		<!--x_moon_rhea--><item>2130837531</item>
 		<!--x_moon_titan--><item>2130837533</item>
+		<!--x_moon_Lapetus--><item>2130837525</item>
 		<!--x_moon_titania--><item>2130837534</item>
+		<!--x_moon_oberon--><item>2130837529</item>
+		<!--x_moon_umbriel--><item>2130837536</item> 
+        <!--x_moon_ariel--><item>2130837518</item>		
+		<!--x_moon_miranda--><item>2130837528</item>		
 		<!--x_moon_triton--><item>2130837535</item>
-		<!--x_moon_umbriel--><item>2130837536</item>        
+		       
     </integer-array>
-    
 </resources>
