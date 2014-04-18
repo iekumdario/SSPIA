@@ -24,6 +24,7 @@ public class SSClass implements OnItemClickListener{
 	private FillMenuAdapter adapter;
 	private String[] planets;
 	private int[] img;
+	private int position;
 	
 
 	public SSClass(Activity activity) {
@@ -49,6 +50,7 @@ public class SSClass implements OnItemClickListener{
                 R.string.drawer_close
                 ) {
             public void onDrawerClosed(View view) {
+            	act.getActionBar().setTitle(planets[position]);
                 act.invalidateOptionsMenu();
             }
 
@@ -64,6 +66,7 @@ public class SSClass implements OnItemClickListener{
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		selectItem(position);
+		this.position = position;
 	}
 	
 	public void selectItem(int position) {
