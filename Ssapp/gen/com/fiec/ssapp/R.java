@@ -100,9 +100,14 @@ public final class R {
         public static final int x_moon_umbriel=0x7f020020;
         public static final int x_universe=0x7f020021;
         public static final int xz_ic_launcher=0x7f020022;
+        public static final int z_customtabcolor=0x7f020023;
+        public static final int z_tab_bg_pressed=0x7f020024;
+        public static final int z_tab_bg_select=0x7f020025;
+        public static final int z_tab_bg_selected=0x7f020026;
+        public static final int z_tab_bg_unselected=0x7f020027;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0012;
+        public static final int action_settings=0x7f0a0013;
         public static final int checkBox1=0x7f0a000c;
         public static final int content_frame=0x7f0a0007;
         public static final int drawer_layout=0x7f0a0006;
@@ -111,14 +116,15 @@ public final class R {
         public static final int layout_tabhost_content=0x7f0a0004;
         public static final int left_drawer=0x7f0a0008;
         public static final int main_planetimage=0x7f0a0001;
-        public static final int main_planetinfo=0x7f0a000d;
+        public static final int main_planetinfo=0x7f0a000e;
         public static final int main_planetnam=0x7f0a0003;
-        public static final int menu_info_res=0x7f0a000f;
-        public static final int menu_info_tags=0x7f0a000e;
-        public static final int menu_planetimage=0x7f0a0010;
-        public static final int menu_planetname=0x7f0a0011;
+        public static final int menu_info_res=0x7f0a0010;
+        public static final int menu_info_tags=0x7f0a000f;
+        public static final int menu_planetimage=0x7f0a0011;
+        public static final int menu_planetname=0x7f0a0012;
         public static final int realtabcontent=0x7f0a0005;
         public static final int relative2=0x7f0a0000;
+        public static final int tabedita1=0x7f0a000d;
         public static final int tempmed=0x7f0a0002;
         public static final int textView2=0x7f0a000b;
     }
@@ -126,10 +132,11 @@ public final class R {
         public static final int activity_planets=0x7f030000;
         public static final int activity_solar=0x7f030001;
         public static final int customdialog=0x7f030002;
-        public static final int fagment_tabhost=0x7f030003;
-        public static final int fragment_infotab=0x7f030004;
-        public static final int info_list=0x7f030005;
-        public static final int menu_lists=0x7f030006;
+        public static final int customtab=0x7f030003;
+        public static final int fagment_tabhost=0x7f030004;
+        public static final int fragment_infotab=0x7f030005;
+        public static final int info_list=0x7f030006;
+        public static final int menu_lists=0x7f030007;
     }
     public static final class menu {
         public static final int solar=0x7f090000;

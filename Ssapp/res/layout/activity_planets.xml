@@ -53,7 +53,8 @@
     	    android:layout_alignParentBottom="true"
     	    android:layout_alignParentLeft="true"
     	    android:layout_alignParentRight="true"
-    	    android:layout_below="@+id/relative2" >
+    	    android:layout_below="@+id/relative2" 
+    	    android:background="@android:color/transparent">
         
         	<android.support.v4.app.FragmentTabHost 
 			    android:id="@android:id/tabhost"

@@ -1,15 +1,14 @@
 package com.fiec.sspia;
 
 import com.fiec.ssapp.R;
-import com.fiec.sspia.mclass.MainFragment;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
+import android.R.color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 public class TabsPlanets{
 	
@@ -25,32 +24,23 @@ public class TabsPlanets{
 		TabsPlanets.pos = pos;
 		th = (FragmentTabHost)parentview.findViewById(android.R.id.tabhost);
 		th.setup(acti, frag.getChildFragmentManager(), R.id.realtabcontent);
+		th.setBackgroundColor(color.transparent);
 	}
 	
-	public View addTabs(){
-		/*Log.w("gmaTag", "pasa0");
-		InformationTab itab = new InformationTab();
-		itab.setAct(act);
-		Log.w("gmaTag", "pasa0.1");
-		TabSpec ts = th.newTabSpec("Information");
-		ts.setIndicator("tab1");
-		Intent intent = new Intent(act, itab.getClass());
-		intent.putExtra("planetname", pname);
-		intent.putExtra("planetposition", position);
-		ts.setContent(intent);
-		Log.w("gmaTag", "pasa1");
-		TabSpec ts2 = th.newTabSpec("Satellites");
-		ts.setIndicator("tab2");
-		Intent intent2 = new Intent(act, SatellitesClass.class);
-		ts2.setContent(intent2);
-		Log.w("gmaTag", "pasa3");*/
-		//InformationTab itab = new InformationTab();
-		th.addTab(th.newTabSpec("tab1").setIndicator("Information"),
+	public boolean addTabs(){		
+		th.addTab(th.newTabSpec("tab1").setIndicator(customTab("Information")),
 				InformationTab.class, null);
 		
-		th.addTab(th.newTabSpec("tab2").setIndicator("Satellites"),
-				SatellitesClass.class, null);		
-		return this.view;
+		th.addTab(th.newTabSpec("tab2").setIndicator(customTab("Satellites")),
+				SatellitesClass.class, null);
+		return true;
+	}
+	
+	private static View customTab(String arsg){
+		View view = LayoutInflater.from(act).inflate(R.layout.customtab, null, false);
+		TextView tv = (TextView)view.findViewById(R.id.tabedita1);
+		tv.setText(arsg);
+		return view;
 	}
 
 }
