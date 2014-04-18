@@ -1,14 +1,11 @@
 package com.fiec.sspia.buff;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.app.Activity;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fiec.ssapp.R;
 import com.fiec.sspia.db.SolarDb;
@@ -22,7 +19,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 	private String[] dats, res;
 	
 	private static final String _TAG = "gmaTag";
-	private Activity act;
+	private FragmentActivity act;
 	private JSONParser parser;
 	private JSONObject json = null;
 	
@@ -31,7 +28,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 	
 	private SolarDb db;
 	
-	public PlanetSource(Activity act, ListView info, String[] dats) {
+	public PlanetSource(FragmentActivity act, ListView info, String[] dats) {
 		parser = new JSONParser();
 		this.dats = dats;
 		this.act = act;
@@ -39,7 +36,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		this.execute();
 	}
 	
-	public PlanetSource(Activity act, ListView info, String pname){
+	public PlanetSource(FragmentActivity act, ListView info, String pname){
 		db = new SolarDb(act.getApplicationContext());
 		
 		int id;
@@ -50,6 +47,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		db.updatetemp(id, res[0], res[1], res[2]);
 		res = db.getDetails(id);
 		adapter = new CustomInfoAdapter(act, res, dats);
+		Log.w("gmaTag", "obteniendo info de "+pname+" - en "+id);
 		info.setAdapter(adapter);
 		//temp.setText(res[1]+"°C");
 		db.close();

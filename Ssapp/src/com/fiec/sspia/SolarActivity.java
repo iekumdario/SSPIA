@@ -5,18 +5,21 @@ import java.lang.reflect.Field;
 import com.fiec.ssapp.R;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.mclass.SSClass;
+import com.fiec.sspia.mclass.SetttingsClass;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
-public class SolarActivity extends Activity{
-	SolarDb db;
+public class SolarActivity extends FragmentActivity{
+	private SolarDb db;
+	private SSClass clase;
+	private static int _POS = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
@@ -24,7 +27,8 @@ public class SolarActivity extends Activity{
 		setSettings();		
 		initialize();		
 		
-		new SSClass(this);
+		clase = new SSClass(this);
+		clase.selectItem(_POS);
 	}	
 
 	@Override
@@ -51,9 +55,11 @@ public class SolarActivity extends Activity{
         SSClass.drawerToggle.onConfigurationChanged(newConfig);
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+    	switch(item.getItemId()){
+    	case R.id.action_settings: new SetttingsClass(this);
+    	}
         if (SSClass.drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -97,6 +103,24 @@ public class SolarActivity extends Activity{
 		}	
 		
 	}
+    
+    @Override
+    public void onBackPressed() {
+    	super.onBackPressed();
+    	this.finish();
+    }
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+    	this.finish();
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	super.onDestroy();
+    	clase = null;
+    }
 
 	public void setSettings() {
 		try {

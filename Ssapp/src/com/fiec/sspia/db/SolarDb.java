@@ -1,6 +1,5 @@
 package com.fiec.sspia.db;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -74,22 +73,13 @@ public class SolarDb {
 		}
 		
 		public String[] getDetails(int id){
-			int i = 1, j = 0;
 			String[] aux = new String[14];
 			Cursor cursor = db.query(DBHelper.TABLEDETALLE, allColumns_detail, null, null, null, null,null);
-			//Cursor cursor = db.query(DBHelper.TABLEDETALLE, allColumns_detail, DBHelper.IDDETALLE+"="+id, null, null, null,null);
+		
 			cursor.move(id);
 			for(int k=0; k<14; k++){
 				aux[k] = cursor.getString(k);
-				Log.w("gmaTag", aux[k]);
-				//Log.w("gmaTag", "aux = "+aux[k]);
 			}
-			/*while(!cursor.isAfterLast()){
-				aux[j] = cursor.getString(i);
-				Log.w("gmaTag", "aux = "+aux[j]);
-				j++; i++;
-				cursor.moveToNext();
-			}*/
 			cursor.close();
 			return aux;
 		}

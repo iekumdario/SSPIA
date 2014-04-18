@@ -86,7 +86,7 @@ public class JSONParser {
         try {
  
             if(method == "GET"){
-            	Log.w("gmaTag", "params: "+params1);
+            	//Log.w("gmaTag", "params: "+params1);
                 DefaultHttpClient httpClient = new DefaultHttpClient();
                 String paramString = URLEncodedUtils.format(params1, "utf-8");
                 url += "?" + paramString;

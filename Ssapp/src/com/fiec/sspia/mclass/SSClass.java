@@ -5,21 +5,18 @@ import com.fiec.sspia.util.FillMenuAdapter;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Dialog;
-import android.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
-public class SSClass implements OnItemClickListener, OnClickListener{
+public class SSClass implements OnItemClickListener{
 	
-	private Activity act;
+	private FragmentActivity act;
 	private DrawerLayout maindrawer;
 	private ListView drawerList;
 	public static ActionBarDrawerToggle drawerToggle;
@@ -28,15 +25,10 @@ public class SSClass implements OnItemClickListener, OnClickListener{
 	private String[] planets;
 	private int[] img;
 	
-	private ImageButton boton;
-	private Dialog dialog;
 
 	public SSClass(Activity activity) {
-		this.act = activity;
-		
-		
-		//activity.getActionBar().setCustomView(R.layout.customactionbar);
-		//activity.getActionBar().setHomeButtonEnabled(true);        
+		this.act = (FragmentActivity) activity;
+		        
         activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
                 | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         activity.getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -44,11 +36,8 @@ public class SSClass implements OnItemClickListener, OnClickListener{
         
         this.planets = activity.getResources().getStringArray(R.array.theplanets);
         this.img = activity.getResources().getIntArray(R.array.theimages);
-        //this.boton = (ImageButton)activity.findViewById(R.id.rangebutton);
-        //this.boton.setOnClickListener(this);
         this.adapter = new FillMenuAdapter(activity, planets, img);
-        this.maindrawer = (DrawerLayout)activity.findViewById(R.id.drawer_layout);
-        this.maindrawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);        
+        this.maindrawer = (DrawerLayout)activity.findViewById(R.id.drawer_layout);        
 		drawerList = (ListView) activity.findViewById(R.id.left_drawer);
 		drawerList.setAdapter(adapter.getItemAdapter());
 		drawerList.setOnItemClickListener(this);
@@ -60,17 +49,15 @@ public class SSClass implements OnItemClickListener, OnClickListener{
                 R.string.drawer_close
                 ) {
             public void onDrawerClosed(View view) {
-                //act.getActionBar().setTitle("");
                 act.invalidateOptionsMenu();
             }
 
             public void onDrawerOpened(View drawerView) {
-                //act.getActionBar().setTitle(R.string.action_menu);
+                act.getActionBar().setTitle(R.string.drawer_open);
                 act.invalidateOptionsMenu();
             }
         };
        maindrawer.setDrawerListener(drawerToggle);
-       selectItem(0); 
         
 	}
 
@@ -79,26 +66,15 @@ public class SSClass implements OnItemClickListener, OnClickListener{
 		selectItem(position);
 	}
 	
-	private void selectItem(int position) {
+	public void selectItem(int position) {
 		MainFragment fragment = new MainFragment();
 	    fragment.setact(act);
 	    fragment.setStrings(planets[position], img[position]);
 	    fragment.setPosition(position);
-
-	    FragmentManager fragmentManager = act.getFragmentManager();
+	    FragmentManager fragmentManager = act.getSupportFragmentManager();
 	    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-
+	   
 	    drawerList.setItemChecked(position, true);
 	    maindrawer.closeDrawer(drawerList);		
 	}
-
-	@Override
-	public void onClick(View v) {
-			dialog = new Dialog(act);
-			dialog.setContentView(R.layout.customdialog);
-			dialog.setTitle("Notifications");
-			dialog.setCanceledOnTouchOutside(true);
-			dialog.show();
-	}
-
 }

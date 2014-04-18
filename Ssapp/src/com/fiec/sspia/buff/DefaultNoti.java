@@ -1,7 +1,7 @@
 package com.fiec.sspia.buff;
 
 import com.fiec.ssapp.R;
-import com.fiec.sspia.PlanetInfoActivity;
+import com.fiec.sspia.TabsPlanets;
 import com.fiec.sspia.util.SSInterfaceNoti;
 
 import android.app.Activity;
@@ -77,7 +77,7 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	    		   act.getSystemService(Activity.NOTIFICATION_SERVICE);
 	       
 	       tsb = TaskStackBuilder.create(act.getApplicationContext());
-	       tsb.addParentStack(PlanetInfoActivity.class);
+	       tsb.addParentStack(TabsPlanets.class);
 	       tsb.addNextIntent(notifi);
 	       
 	       intent = tsb.getPendingIntent(0, PendingIntent.FLAG_ONE_SHOT);
@@ -101,7 +101,7 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	    		   act.getSystemService(Activity.NOTIFICATION_SERVICE);
 	       
 	       tsb = TaskStackBuilder.create(act.getApplicationContext());
-	       tsb.addParentStack(PlanetInfoActivity.class);
+	       tsb.addParentStack(TabsPlanets.class);
 	       tsb.addNextIntent(notifi);
 	       
 	       intent = tsb.getPendingIntent(0, PendingIntent.FLAG_ONE_SHOT);

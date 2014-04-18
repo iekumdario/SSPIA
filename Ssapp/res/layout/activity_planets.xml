@@ -46,13 +46,48 @@
 
     </RelativeLayout>
 
-    	<ListView
-    	    android:id="@+id/main_planetinfo"
+    	<RelativeLayout
+    	    android:id="@+id/layout_tabhost_content"
     	    android:layout_width="wrap_content"
-    	    android:layout_height="match_parent"
-    	    android:layout_below="@+id/relative2"
-    	    android:background="@drawable/x_universe" >
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentBottom="true"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_below="@+id/relative2" >
+        
+        	<android.support.v4.app.FragmentTabHost 
+			    android:id="@android:id/tabhost"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical" >
+			    
+			    <LinearLayout
+			    android:orientation="vertical"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent">
+			
+				    <TabWidget
+				        android:id="@android:id/tabs"	
+				        android:orientation="horizontal"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="0"/>
+				
+				    <FrameLayout
+				        android:id="@android:id/tabcontent"
+				        android:layout_width="0dp"
+				        android:layout_height="0dp"
+				        android:layout_weight="0"/>
+				
+				    <FrameLayout
+				        android:id="@+id/realtabcontent"
+				        android:layout_width="match_parent"
+				        android:layout_height="0dp"
+				        android:layout_weight="1"/>
+			
+				</LinearLayout>
+			</android.support.v4.app.FragmentTabHost>
 
-  		 </ListView>
+    	</RelativeLayout>
 
 </RelativeLayout>
