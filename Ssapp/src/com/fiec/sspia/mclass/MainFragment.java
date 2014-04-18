@@ -79,7 +79,7 @@ public class MainFragment extends Fragment{
 	
 	private void setinfo(){		
 		act.getActionBar().setTitle(pname);
-		new PlanetSource(act, planetinfo, pname, temp);
+		new PlanetSource(act, planetinfo, pname);
 		switch(this.position){
 		case 3: new PlanetSource(act, planetinfo, dats); break;
 		}
