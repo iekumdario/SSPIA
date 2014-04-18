@@ -100,25 +100,25 @@
         <item>2131099675</item><!-- neptune -->
    </integer-array>
     <integer-array name="satellitesimg">
-        <!--x_moon_ariel--><item>0x7f02000e</item>
-		<!--x_moon_callisto--><item>0x7f02000f</item>
-		<!--x_moon_deimos--><item>0x7f020010</item>
-		<!--x_moon_dione--><item>0x7f020011</item>
-		<!--x_moon_enceladus--><item>0x7f020012</item>
-		<!--x_moon_europa--><item>0x7f020013</item>
-		<!--x_moon_ganimedes--><item>0x7f020014</item>
-		<!--x_moon_iapetus--><item>0x7f020015</item>
-		<!--x_moon_io--><item>0x7f020016</item>
-		<!--x_moon_mimas--><item>0x7f020017</item>
-		<!--x_moon_miranda--><item>0x7f020018</item>
-		<!--x_moon_oberon--><item>0x7f020019</item>
-		<!--x_moon_phobos--><item>0x7f02001a</item>
-		<!--x_moon_rhea--><item>0x7f02001b</item>
-		<!--x_moon_tethys--><item>0x7f02001c</item>
-		<!--x_moon_titan--><item>0x7f02001d</item>
-		<!--x_moon_titania--><item>0x7f02001e</item>
-		<!--x_moon_triton--><item>0x7f02001f</item>
-		<!--x_moon_umbriel--><item>0x7f020020</item>        
+        <!--x_moon_ariel--><item>2130837518</item>
+		<!--x_moon_callisto--><item>2130837519</item>
+		<!--x_moon_deimos--><item>2130837520</item>
+		<!--x_moon_dione--><item>2130837521</item>
+		<!--x_moon_enceladus--><item>2130837522</item>
+		<!--x_moon_europa--><item>2130837523</item>
+		<!--x_moon_ganimedes--><item>2130837524</item>
+		<!--x_moon_iapetus--><item>2130837525</item>
+		<!--x_moon_io--><item>2130837526</item>
+		<!--x_moon_mimas--><item>21308375207</item>
+		<!--x_moon_miranda--><item>2130837528</item>
+		<!--x_moon_oberon--><item>2130837529</item>
+		<!--x_moon_phobos--><item>2130837530</item>
+		<!--x_moon_rhea--><item>2130837531</item>
+		<!--x_moon_tethys--><item>2130837532</item>
+		<!--x_moon_titan--><item>2130837533</item>
+		<!--x_moon_titania--><item>2130837534</item>
+		<!--x_moon_triton--><item>2130837535</item>
+		<!--x_moon_umbriel--><item>2130837536</item>        
     </integer-array>
     
 </resources>
