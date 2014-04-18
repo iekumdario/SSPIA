@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="theplanets">
-        <item >Mercury</item>
-        <item >Venus</item>
-        <item >The Moon</item>
-        <item >Mars</item>
-        <item >Jupiter</item>
-        <item >Saturn</item>
-        <item >Uranus</item>
-        <item >Neptune</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>The Moon</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
     </string-array>
+    
+    <string-array name="satellites">
+        <item>Deimos</item>
+        <item>Phobos</item>
+        <item>Io</item>
+        <item>Europa</item>
+        <item>Ganimedes</item>
+        <item>Callisto</item>
+        <item>Mimas</item>
+        <item>Enceladus</item>
+        <item>Tethys</item>
+        <item>Dione</item>
+        <item>Rhea</item>
+        <item>Titan</item>
+        <item>Lapetus</item>
+        <item>Titania</item>
+        <item>Oberon</item>
+        <item>Umbriel</item>
+        <item>Ariel</item>
+        <item>Miranda</item>
+        <item>Triton</item>
+    </string-array>
+    
+    <integer-array name="satelliteplanet">
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>8</item>
+    </integer-array>
     
     <integer-array name="theimages">
         <item >2130837510</item>
