@@ -86,11 +86,11 @@
     </string-array>
 
     <string-array name="deimos">
-        <item>null</item>
+        <item>-30</item>
         <item>-40</item>
-        <item>null</item>
+        <item>-50</item>
         <item>no</item>
-        <item>rocky</item>
+        <item>Rocky moon</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -103,11 +103,11 @@
     </string-array>
 
     <string-array name="phobos">
-        <item>null</item>
+        <item>-30</item>
         <item>-40</item>
-        <item>null</item>
+        <item>-50</item>
         <item>no</item>
-        <item>rocky</item>
+        <item>Rocky moon</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -137,11 +137,11 @@
     </string-array>
 
     <string-array name="io">
-        <item>null</item>
+        <item>-133</item>
         <item>-143.15</item>
-        <item>null</item>
+        <item>-153</item>
         <item>no</item>
-        <item>rocky with volcanoes</item>
+        <item>Rocky and volcanoes</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -158,7 +158,7 @@
         <item>null</item>
         <item>-223</item>
         <item>yes</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -171,11 +171,11 @@
     </string-array>
 
     <string-array name="ganimedes">
-        <item>null</item>
+        <item>-150</item>
         <item>-160</item>
-        <item>null</item>
+        <item>-170</item>
         <item>yes</item>
-        <item>rocky and icy</item>
+        <item>Rocky and icy cover</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -192,7 +192,7 @@
         <item>-139</item>
         <item>-193</item>
         <item>yes</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -222,11 +222,11 @@
     </string-array>
 
     <string-array name="mimas">
-        <item>null</item>
+        <item>-190</item>
         <item>-209</item>
-        <item>null</item>
+        <item>-210</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -243,7 +243,7 @@
         <item>-198</item>
         <item>-240</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -256,11 +256,11 @@
     </string-array>
 
     <string-array name="tethys">
-        <item>null</item>
+        <item>-170</item>
         <item>-187</item>
-        <item>null</item>
+        <item>-197</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -273,11 +273,11 @@
     </string-array>
 
     <string-array name="dione">
-        <item>null</item>
+        <item>-175</item>
         <item>-186</item>
-        <item>null</item>
+        <item>-195</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -294,7 +294,7 @@
         <item>null</item>
         <item>-220</item>
         <item>yes</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -307,11 +307,11 @@
     </string-array>
 
     <string-array name="titan">
-        <item>null</item>
-        <item>-179.5</item>
-        <item>null</item>
+        <item>-170</item>
+        <item>-179</item>
+        <item>-190</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -328,7 +328,7 @@
         <item>null</item>
         <item>-183</item>
         <item>yes</item>
-        <item>ice and rock covered by gas</item>
+        <item>Ice and rock covered by gas</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -358,11 +358,11 @@
     </string-array>
 
     <string-array name="titania">
-        <item>null</item>
+        <item>-190</item>
         <item>-203</item>
-        <item>null</item>
+        <item>-210</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -375,11 +375,11 @@
     </string-array>
 
     <string-array name="oberon">
-        <item>null</item>
+        <item>-183</item>
         <item>-193</item>
-        <item>null</item>
+        <item>-200</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -396,7 +396,7 @@
         <item>null</item>
         <item>-198</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -413,7 +413,7 @@
         <item>null</item>
         <item>-213</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -430,7 +430,7 @@
         <item>null</item>
         <item>-213</item>
         <item>partial</item>
-        <item>rocky and icy with craters</item>
+        <item>Rocky and icy with craters</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -460,11 +460,11 @@
     </string-array>
 
     <string-array name="triton">
-        <item>null</item>
+        <item>-225</item>
         <item>-235</item>
-        <item>null</item>
+        <item>-245</item>
         <item>yes</item>
-        <item>gaseous with ice core</item>
+        <item>Gaseous with ice core</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
