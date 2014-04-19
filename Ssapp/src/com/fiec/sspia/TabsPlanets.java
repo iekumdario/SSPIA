@@ -4,9 +4,11 @@ import com.fiec.ssapp.R;
 import com.fiec.sspia.db.SolarDb;
 
 import android.R.color;
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.text.AndroidCharacter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -25,23 +27,22 @@ public class TabsPlanets{
 		TabsPlanets.pos = pos;
 		th = (FragmentTabHost)parentview.findViewById(android.R.id.tabhost);
 		th.setup(acti, frag.getChildFragmentManager(), R.id.realtabcontent);
-		th.setBackgroundColor(color.transparent);
 	}
 	
-	public boolean addTabs(){		
-		th.addTab(th.newTabSpec("tab1").setIndicator(customTab("Information")),
-				InformationTab.class, null);
+	public boolean addTabs(){	
+		String c= "#33B5E5";
+		th.addTab(th.newTabSpec("tab1").setIndicator("Information"),InformationTab.class, null);
+		
 		if(getSatCount() >= 1)
-			th.addTab(th.newTabSpec("tab2").setIndicator(customTab("Satellites")),
-					SatellitesClass.class, null);
+			th.addTab(th.newTabSpec("tab2").setIndicator("Satellites"),SatellitesClass.class, null);
+		
+	    for(int i=0;i<th.getTabWidget().getChildCount();i++) 
+	    {
+	        TextView tv = (TextView) th.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+	        tv.setTextColor(Color.parseColor(c));
+	    } 
+	    
 		return true;
-	}
-	
-	private static View customTab(String arsg){
-		View view = LayoutInflater.from(act).inflate(R.layout.customtab, null, false);
-		TextView tv = (TextView)view.findViewById(R.id.tabedita1);
-		tv.setText(arsg);
-		return view;
 	}
 	
 	private int getSatCount(){
