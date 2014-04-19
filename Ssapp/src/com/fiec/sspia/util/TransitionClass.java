@@ -20,7 +20,6 @@ public class TransitionClass {
 	}
 	
 	public void setParams(String pname, int pos, int pos2){
-		Log.e("gmaTag", "pos1="+pos+" - pos2 = "+pos2);
 		this.db.open();
 		pos = db.getIdbyPname(pname);
 		this.aux = db.getSatellitesByPlanetId(pos);
@@ -43,7 +42,6 @@ public class TransitionClass {
 		arg4 = new int[aux.length];
 		
 		for(int i = 0; i<arg3.length; i++){
-			Log.e("gmaTag", "aux["+i+"] = "+aux[i]);
 			arg3[i] = arg1[aux[i]-1];
 			arg4[i] = arg2[aux[i]-1];
 		}

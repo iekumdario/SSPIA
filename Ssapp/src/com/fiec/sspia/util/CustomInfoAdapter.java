@@ -3,7 +3,6 @@ package com.fiec.sspia.util;
 import com.fiec.ssapp.R;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,15 +41,12 @@ public class CustomInfoAdapter extends BaseAdapter{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view = convertView;
 		TextView tags, info;
-		
 		view = inflater.inflate(R.layout.info_list, null);
 		tags = (TextView)view.findViewById(R.id.menu_info_tags);
 		info = (TextView)view.findViewById(R.id.menu_info_res);
-		
 		tags.setText(tag[position]);
 		info.setText(res[position]);
 		
 		return view;
 	}
-
 }

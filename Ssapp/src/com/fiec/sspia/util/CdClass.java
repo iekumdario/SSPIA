@@ -18,7 +18,7 @@ public class CdClass extends AbstrCd implements OnClickListener{
 		this._HEIGHT = (int) (metr.heightPixels * 0.60);
 		this.params.width = _WIDTH;
 		
-		this.dialog.getWindow().setLayout(_WIDTH, _HEIGHT);
+		//this.dialog.getWindow().setLayout(_WIDTH, _HEIGHT);
 		this.close.setOnClickListener(this);
 	}
 

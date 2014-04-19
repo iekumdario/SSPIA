@@ -67,7 +67,6 @@ public class SolarDb {
 		cursor.move(id);
 		for(int k=0; k<allColumns_satdetail.length; k++){			
 			aux[k] = cursor.getString(k);
-			Log.e("gmaTag", "detail = "+aux[k]);
 		}
 		cursor.close();
 		return aux;
@@ -140,12 +139,10 @@ public class SolarDb {
 
 	// obtiene id de lunas de planeta segun id de planeta, compatible con getdetails
 	public int[] getSatellitesByPlanetId(int PlanetId) {
-		Log.e("gmaTag", "id1 = "+PlanetId);
 		Cursor cursor = db.query(DBHelper.TABLEMOON,
 				new String[] { DBHelper.IDLUNA }, DBHelper.IDPLANET + "="
 						+ PlanetId, null, null, null, null);
 		int[] satellites = new int[cursor.getCount()];
-		Log.e("gmaTag", "leng1 = "+cursor.getCount());
 		cursor.moveToFirst();
 		for (int i = 0; i < cursor.getCount(); i++){
 			satellites[i] = cursor.getInt(0);

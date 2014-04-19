@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" 
-    android:background="@drawable/z_customback_moondialog">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/cmoon_image"
-        android:paddingTop="5dp"
-        android:text="Max. Temperature"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
+    android:layout_height="wrap_content"
+    android:background="@drawable/z_customback_moondialog" >
 
     <TextView
         android:id="@+id/cmoon_title"
@@ -37,103 +26,47 @@
 
     <ImageButton
         android:id="@+id/cmoon_close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/cmoon_maxtmp"
         android:background="@drawable/z_customclose"
         android:src="@android:drawable/ic_delete" />
 
-    <TextView
-        android:id="@+id/textView1"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/cmoon_title"
-        android:layout_below="@+id/cmoon_maxtmp"
-        android:layout_marginRight="34dp"
-        android:paddingTop="3dp"
-        android:text="Min. Temperature"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/cmoon_mintmp"
-        android:paddingTop="3dp"
-        android:text="Ice cover"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/cmoon_icecov"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cmoon_mintmp"
-        android:layout_below="@+id/textView1"
-        android:text="partial"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/cmoon_maxtmp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toRightOf="@+id/cmoon_image"
-        android:text="-30"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/cmoon_mintmp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cmoon_maxtmp"
-        android:layout_toRightOf="@+id/cmoon_image"
-        android:text="-189"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_below="@+id/textView6"
-        android:paddingTop="3dp"
-        android:text="Surface"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/cmoon_surf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView8"
-        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignParentBottom="false"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/cmoon_image"
-        android:text="rocky and icy with craters"
-        android:textColor="#ffffff"
-        android:textSize="17sp" />
+        android:layout_below="@+id/cmoon_image"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/cmon_listinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+        </ListView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/cmoon_discovered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/cmoon_surf"
-        android:layout_marginTop="33dp"
-        android:paddingBottom="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="25dp"
+        android:layout_below="@+id/linearLayout1"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:text="aqui text de descubrimiento"
         android:textColor="#ffffff"
-        android:textSize="14sp" />
+        android:textSize="17sp" />
 
 </RelativeLayout>

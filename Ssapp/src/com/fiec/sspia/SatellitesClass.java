@@ -72,8 +72,6 @@ public class SatellitesClass extends Fragment implements OnItemClickListener{
 		this.bundle = this.transition.getParams();
 		cd = new CdClass(context, content);
 		cd.setAttr(bundle, position);
-		/*cd.setAttr(this.bundle.getStringArray(_KEYS[0])[position], 
-				this.bundle.getIntArray(_KEYS[1])[position]);*/
 		cd.showdialog();
 	}
 }
