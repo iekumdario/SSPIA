@@ -18,6 +18,8 @@ public class SolarDb {
 			DBHelper.MASS, DBHelper.DIAMETER, DBHelper.MEAN_DEN,
 			DBHelper.SCAP_VEL, DBHelper.AVDIS, DBHelper.ROTPER,
 			DBHelper.OBLIQUITI, DBHelper.ORBIT, DBHelper.ORBIT_ECC };
+	private String[] allColumns_satdetail = { DBHelper.TEMPMAX, DBHelper.TEMP_MED,
+			DBHelper.TEMP_MIN, DBHelper.ICECOVER, DBHelper.SURFACE};
 
 	public SolarDb(Context context) {
 		dbhelper = new DBHelper(context);
@@ -57,13 +59,26 @@ public class SolarDb {
 		cursor.move(1);
 		return cursor.getString(1);		
 	}
+	
+	public String[] getSatDetails(int id){
+		String[] aux = new String[allColumns_satdetail.length];
+		Cursor cursor = db.query(DBHelper.TABLEDETALLE, allColumns_satdetail, null, null, null, null,null);
+	
+		cursor.move(id);
+		for(int k=0; k<allColumns_satdetail.length; k++){			
+			aux[k] = cursor.getString(k);
+			Log.e("gmaTag", "detail = "+aux[k]);
+		}
+		cursor.close();
+		return aux;
+}
 		
 	public String[] getDetails(int id){
 			String[] aux = new String[14];
 			Cursor cursor = db.query(DBHelper.TABLEDETALLE, allColumns_detail, null, null, null, null,null);
 		
 			cursor.move(id);
-			for(int k=0; k<14; k++){
+			for(int k=0; k<allColumns_detail.length; k++){
 				aux[k] = cursor.getString(k);
 			}
 			cursor.close();
@@ -125,10 +140,12 @@ public class SolarDb {
 
 	// obtiene id de lunas de planeta segun id de planeta, compatible con getdetails
 	public int[] getSatellitesByPlanetId(int PlanetId) {
+		Log.e("gmaTag", "id1 = "+PlanetId);
 		Cursor cursor = db.query(DBHelper.TABLEMOON,
 				new String[] { DBHelper.IDLUNA }, DBHelper.IDPLANET + "="
 						+ PlanetId, null, null, null, null);
 		int[] satellites = new int[cursor.getCount()];
+		Log.e("gmaTag", "leng1 = "+cursor.getCount());
 		cursor.moveToFirst();
 		for (int i = 0; i < cursor.getCount(); i++){
 			satellites[i] = cursor.getInt(0);
@@ -136,5 +153,14 @@ public class SolarDb {
 		}
 		cursor.close();
 		return satellites;
+	}
+	
+	public int getRealSatBySatellitesId(int satId){
+		Log.e("gmaTag", "id = "+satId);
+		Cursor cursor = db.query(DBHelper.TABLEMOON,
+				new String[] { DBHelper.IDDETALLE }, DBHelper.IDLUNA + "="
+						+ satId, null, null, null, null);
+		cursor.moveToFirst();
+		return cursor.getInt(0);
 	}
 }
