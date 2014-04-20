@@ -18,6 +18,9 @@
     <string name="info_second">José Quintero</string>
     <string name="info_third">Daniel Martínez</string>
     <string name="info_email">sspiateam@gmail.com</string>
+    <string name="info_app">The temperatures are approximate. Calculation based on minimum and maximum values. Sources:</string>
+    <string name="link_nasa">pds.jpl.nasa.gov/planets/special/planets.htm</string>
+    <string name="others">and others.</string>
     
     <string name="sat_infotab">Notable Satellites</string>
     
