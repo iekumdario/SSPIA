@@ -42,7 +42,7 @@
         android:background="@drawable/x_customtextfield"
         android:ems="10"
         android:hint="@string/tempmax"
-        android:inputType="number|numberSigned|numberDecimal"
+        android:inputType="phone"
         android:paddingLeft="5dp" />
 
     <EditText

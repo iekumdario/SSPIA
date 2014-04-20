@@ -20,6 +20,7 @@ public class SolarDb {
 			DBHelper.OBLIQUITI, DBHelper.ORBIT, DBHelper.ORBIT_ECC };
 	private String[] allColumns_satdetail = { DBHelper.TEMPMAX, DBHelper.TEMP_MED,
 			DBHelper.TEMP_MIN, DBHelper.ICECOVER, DBHelper.SURFACE};
+	private String[] mars_columns2 = {DBHelper.TEMP_MIN, DBHelper.TEMPMAX};
 	private String[] mars_columns = {DBHelper.LOG_TEMPMIN, DBHelper.LOG_TEMPMAX};
 
 	public SolarDb(Context context) {
@@ -86,11 +87,11 @@ public class SolarDb {
 	public String[] getMarsTemp(int id){
 		Log.w("gmaTag", "idmars = "+id);
 		String[] aux = new String[2];
-		Cursor cursor = db.query(DBHelper.TABLEDETALLE, mars_columns,
+		Cursor cursor = db.query(DBHelper.TABLEDETALLE, mars_columns2,
 				null, null, null, null,null);		
 		cursor.move(id);
 		Log.w("gmaTag", "marsdet = "+cursor.getCount());
-		for(int k=0; k<mars_columns.length; k++){
+		for(int k=0; k<mars_columns2.length; k++){
 			aux[k] = cursor.getString(k);
 		}
 		cursor.close();
