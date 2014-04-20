@@ -2,23 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fiec.ssapp"
     android:versionCode="2"
-    android:versionName="0.0.9" >
+    android:versionName="0.0.9.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
     
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity 
-            android:name="com.fiec.sspia.TabsPlanets"
-            android:label="">            
-        </activity>
+        
         <activity
             android:name="com.fiec.sspia.SolarActivity"
             android:label="@string/app_name" 
@@ -29,6 +27,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <service android:name="com.fiec.sspia.system.SspiaService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name">            
+        </service>
+        
+        <receiver android:name="BroadcastRec">
+            <intent-filter >
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="StartingNotis"></receiver>
     </application>
 
 </manifest>

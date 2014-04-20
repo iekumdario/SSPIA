@@ -20,6 +20,7 @@ public class SolarDb {
 			DBHelper.OBLIQUITI, DBHelper.ORBIT, DBHelper.ORBIT_ECC };
 	private String[] allColumns_satdetail = { DBHelper.TEMPMAX, DBHelper.TEMP_MED,
 			DBHelper.TEMP_MIN, DBHelper.ICECOVER, DBHelper.SURFACE};
+	private String[] mars_columns = {DBHelper.LOG_TEMPMIN, DBHelper.LOG_TEMPMAX};
 
 	public SolarDb(Context context) {
 		dbhelper = new DBHelper(context);
@@ -38,8 +39,6 @@ public class SolarDb {
 	}
 
 	public boolean updatetemp(int id, String max, String med, String min) {
-		Log.w("gmaTag", "id:" + id + " max:" + max + " med:" + med + " min:"
-				+ min);
 		double medi = 0;
 		if (med.compareTo("null") == 0 || med.compareTo("0.0") == 0) {
 			medi = (Double.parseDouble(max) + Double.parseDouble(min)) / 2;
@@ -83,6 +82,33 @@ public class SolarDb {
 			cursor.close();
 			return aux;
 	}
+	
+	public String[] getMarsTemp(int id){
+		Log.w("gmaTag", "idmars = "+id);
+		String[] aux = new String[2];
+		Cursor cursor = db.query(DBHelper.TABLEDETALLE, mars_columns,
+				null, null, null, null,null);		
+		cursor.move(id);
+		Log.w("gmaTag", "marsdet = "+cursor.getCount());
+		for(int k=0; k<mars_columns.length; k++){
+			aux[k] = cursor.getString(k);
+		}
+		cursor.close();
+		return aux;
+	}
+	
+	public String[] getUserTemp(){
+		String[] aux = new String[2];
+		Cursor cursor = db.query(DBHelper.TABLECHECK, mars_columns,
+				null, null, null, null,null);
+		cursor.moveToFirst();
+		for(int k=0; k<mars_columns.length; k++){
+			aux[k] = cursor.getString(k);
+		}
+		cursor.close();
+		return aux;
+	}	
+	
 
 	public int getIdbyPname(String planet) {
 		int id;
@@ -125,6 +151,43 @@ public class SolarDb {
 				+ "','" + dats[13] + "')");
 		return true;
 	}
+	
+	public boolean createLog(String arg1, String arg2, String arg3, String arg4){
+		db.execSQL("INSERT INTO "+DBHelper.TABLECHECK+ "("+DBHelper.ISACT+","
+				+DBHelper.ISCHECK+","+DBHelper.LOG_TEMPMIN+","+DBHelper.LOG_TEMPMAX+")"+
+				" VALUES ('"+arg1+"','"+arg2+"','"+arg3+"','"+arg4+"')");
+		return true;
+	}
+	public boolean updateLogIsact(String arg1) {
+		db.execSQL("update " + DBHelper.TABLECHECK + " set "
+					+ DBHelper.ISACT + "='" + arg1 + "';");
+		return true;
+	}
+	public boolean updateLogIscheck(String arg2) {
+		db.execSQL("update " + DBHelper.TABLECHECK + " set "
+					+ DBHelper.ISCHECK + "='" + arg2 + "';");
+		return true;
+	}
+	public boolean updateLogTemp(String arg1, String arg2) {
+		db.execSQL("update " + DBHelper.TABLECHECK + " set "
+					+ DBHelper.LOG_TEMPMIN + "='" + arg1 + "',"
+					+ DBHelper.LOG_TEMPMAX + "='" + arg2+"';");
+		return true;
+	}
+	
+	public String getIsAct(){
+		Cursor cursor = db.query(DBHelper.TABLECHECK,
+				new String[] { DBHelper.ISACT }, null, null, null, null, null);
+		cursor.moveToFirst();
+		return cursor.getString(0);
+	}
+	
+	public String getIsCheck(){
+		Cursor cursor = db.query(DBHelper.TABLECHECK,
+				new String[] { DBHelper.ISCHECK }, null, null, null, null, null);
+		cursor.moveToFirst();
+		return cursor.getString(0);
+	}
 
 	// agrega datos a tabla "table_moon"
 	public boolean createSatellites(String[] satName, int[] satPlanet) {
@@ -153,7 +216,6 @@ public class SolarDb {
 	}
 	
 	public int getRealSatBySatellitesId(int satId){
-		Log.e("gmaTag", "id = "+satId);
 		Cursor cursor = db.query(DBHelper.TABLEMOON,
 				new String[] { DBHelper.IDDETALLE }, DBHelper.IDLUNA + "="
 						+ satId, null, null, null, null);

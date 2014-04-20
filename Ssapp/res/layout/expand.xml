@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/mars" />
+
+    <TextView
+        android:id="@+id/expandtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:paddingLeft="10dp"
+        android:text="Message from "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/expandtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expandtitle"
+        android:layout_below="@+id/expandtitle"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:text="shjsebglsnserlkvnlsrvbsrlvbkrslvkn" />
+
+</RelativeLayout>

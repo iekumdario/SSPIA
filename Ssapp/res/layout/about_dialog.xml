@@ -6,7 +6,7 @@
     android:paddingBottom="10dp" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/expandtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,7 +21,7 @@
         android:id="@+id/dividerhori"
         style="@style/horizontalline"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/expandtitle"
         android:layout_marginTop="14dp"
         android:background="#ffffff"
         android:shadowColor="#101010"

@@ -16,6 +16,12 @@ public class DBHelper extends SQLiteOpenHelper{
 		public static final String IDLUNA = "idluna";
 		public static final String NAME = "name";
 		
+		public static final String TABLECHECK = "table_log";
+		public static final String ISACT = "isact";
+		public static final String ISCHECK = "ischeck";
+		public static final String LOG_TEMPMIN = "log_tempmin";
+		public static final String LOG_TEMPMAX = "log_tempmax";
+		
 		public static final String TABLEDETALLE = "table_detalle";
 		public static final String TEMPMAX = "temp_max";
 		public static final String TEMP_MIN = "temp_min";
@@ -52,6 +58,9 @@ public class DBHelper extends SQLiteOpenHelper{
 			ICECOVER+" text, "+SURFACE+" text, "+MASS+" text, "+DIAMETER+" text, "+
 			MEAN_DEN+" text, "+SCAP_VEL+" text, "+AVDIS+" text, "+ROTPER+" text, "+
 			OBLIQUITI+" text, "+ORBIT+" text, "+ORBIT_ECC+" text)";
+	
+	public static final String DB_CREATE4 = "create table "+TABLECHECK+"("+ISACT+" text not null, "
+			+ISCHECK+" text not null, "+LOG_TEMPMIN+" text not null, "+LOG_TEMPMAX+" text not null)";
 
 	public DBHelper(Context context) {
 		super(context, DBNAME, null, DBVERSION);
@@ -61,7 +70,8 @@ public class DBHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(DB_CREATE3);
 		db.execSQL(DB_CREATE2);
-		db.execSQL(DB_CREATE);		
+		db.execSQL(DB_CREATE);	
+		db.execSQL(DB_CREATE4);
 	}
 
 	@Override

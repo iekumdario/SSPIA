@@ -3,20 +3,20 @@ package com.fiec.sspia.util;
 import java.util.Calendar;
 
 public class TempClass {
-	protected int min;
-	protected int max;
+	protected double min;
+	protected double max;
 
-	public TempClass(int min, int max) {
+	public TempClass(double min, double max) {
 		this.min = min;
 		this.max = max;
 
 	}
 	
-	public int Temper()
+	public double Temper()
 	{
 		Calendar c = Calendar.getInstance(); 
 		int hour = c.get(Calendar.HOUR_OF_DAY);
-		int temp = 0;
+		double temp = 0;
 		
 		if(hour>=22||hour<=4)
 			temp = min;

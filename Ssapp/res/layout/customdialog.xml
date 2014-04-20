@@ -9,7 +9,7 @@
         android:id="@+id/dividerhori"
         style="@style/horizontalline"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/expandtitle"
         android:layout_marginTop="5dp"
         android:background="#ffffff"
         android:shadowColor="#101010"
@@ -29,19 +29,6 @@
         android:paddingTop="10dp"
         android:text="@string/marsinfo2"
         android:textColor="#ffffff" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="5dp"
-        android:text="@string/marsinfo1"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/notify_maxtemp"
@@ -74,5 +61,20 @@
         android:singleLine="true" >
 
     </EditText>
+
+    <TextView
+        android:id="@+id/expandtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/marsinfo1"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
 
 </RelativeLayout>

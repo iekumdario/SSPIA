@@ -1,23 +1,29 @@
 package com.fiec.sspia.buff;
 
 import com.fiec.ssapp.R;
+import com.fiec.sspia.SolarActivity;
 import com.fiec.sspia.TabsPlanets;
 import com.fiec.sspia.util.SSInterfaceNoti;
+import com.fiec.sspia.util.TempClass;
 
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.widget.RemoteViews;
 
 public abstract class DefaultNoti implements SSInterfaceNoti{
 	
-	protected Activity act;
+	protected Context act;
 	protected Context context;
 	protected String _DEFAULT;
 	protected String _CUSTOM;
+	protected TempClass temp;
 	
 	protected String _TYPE;
 	protected String _CTITLE;
@@ -37,20 +43,23 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	private TaskStackBuilder tsb;
 	private PendingIntent intent;
 	protected Class<?> myclass;
+	private RemoteViews expand;
 
-	public DefaultNoti(Activity act, String _TYPE) {
+	public DefaultNoti(Context act, NotificationManager manager, String _TYPE) {
 		this.act = act;
+		this.manager = manager;
 		this._TYPE = _TYPE;
+		expand = new RemoteViews(act.getPackageName(), R.layout.expand); 
 	}
 	
-	public DefaultNoti(Activity act, String _TYPE, String[] params) {
-		this.act = act;
+	public DefaultNoti(Context act, String _TYPE, String[] params) {
+		this.act = (Activity) act;
 		this._TYPE = _TYPE;
 		this._PARAMS = params;
 	}
 	
-	public DefaultNoti(Activity act, String _TYPE, int[] params) {
-		this.act = act;
+	public DefaultNoti(Context act, String _TYPE, int[] params) {
+		this.act = (Activity) act;
 		this._TYPE = _TYPE;
 		this._PARAMS2 = params;
 	}
@@ -65,22 +74,26 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	}
 	
 	private void setDefaultNotifi(){
-		notifi = new Intent(context, myclass);	       
-	       rangenoti = 
-	    		   new NotificationCompat.Builder(act.getApplicationContext())
-			       	.setContentTitle("Take a tour on Mars!")
-			       	.setContentText("The Mars temperature is good for survival")
-			       	.setSmallIcon(R.drawable.ic_launcher)
-			       	.setTicker("Openfor details");
-	       rangenoti.setAutoCancel(true);
-	       manager = (NotificationManager)
-	    		   act.getSystemService(Activity.NOTIFICATION_SERVICE);
+		notifi = new Intent(act, myclass);
+		expand.setTextViewText(R.id.expandtext, "If this were this hour On Mars the temperature "
+       			+ "would be "+temp.Temper()+"ºC");
+		expand.setTextViewText(R.id.expandtitle, "Message from SSPIA");
 	       
-	       tsb = TaskStackBuilder.create(act.getApplicationContext());
-	       tsb.addParentStack(TabsPlanets.class);
+	    Bitmap remote_picture = BitmapFactory.decodeResource(act.getResources(), R.drawable.ic_launcher);
+	       rangenoti = 
+	    		   new NotificationCompat.Builder(act)
+			       .setSmallIcon(R.drawable.ic_launcher)
+			       .setLargeIcon(remote_picture)
+			       .setContent(expand)
+			       .setTicker("SSPIA Notification");
+	       
+	       rangenoti.setAutoCancel(true);
+	       
+	       tsb = TaskStackBuilder.create(act);
+	       tsb.addParentStack(myclass);
 	       tsb.addNextIntent(notifi);
 	       
-	       intent = tsb.getPendingIntent(0, PendingIntent.FLAG_ONE_SHOT);
+	       intent = tsb.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 	       rangenoti.setContentIntent(intent);      
 	}
 	
@@ -89,9 +102,9 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	}
 	
 	private void setCustomNotifi(){
-		notifi = new Intent(context, myclass);	       
+		notifi = new Intent(act, myclass);	       
 	       rangenoti = 
-	    		   new NotificationCompat.Builder(act.getApplicationContext())
+	    		   new NotificationCompat.Builder(act)
 			       	.setContentTitle(_CTITLE)
 			       	.setContentText(_CTEXT)
 			       	.setSmallIcon(_SICON)
@@ -100,7 +113,7 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	       manager = (NotificationManager)
 	    		   act.getSystemService(Activity.NOTIFICATION_SERVICE);
 	       
-	       tsb = TaskStackBuilder.create(act.getApplicationContext());
+	       tsb = TaskStackBuilder.create(act);
 	       tsb.addParentStack(TabsPlanets.class);
 	       tsb.addNextIntent(notifi);
 	       
@@ -110,7 +123,6 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	
 	@Override
 	public void getRes() {
-		context = act.getApplicationContext();
 		_DEFAULT = act.getResources().getString(R.string.defaulttype);	
 		_CUSTOM = act.getResources().getString(R.string.customtype);		
 	}

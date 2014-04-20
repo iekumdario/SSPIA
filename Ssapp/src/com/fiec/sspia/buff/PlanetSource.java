@@ -70,6 +70,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 			db = new SolarDb(act.getApplicationContext());
 			db.open();
 			db.updatetemp(4, res[5], "null", res[3]);
+			db.updateLogTemp(res[3], res[5]);
 			db.close();
 		}
 	}

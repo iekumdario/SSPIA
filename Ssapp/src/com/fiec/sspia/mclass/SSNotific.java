@@ -1,20 +1,23 @@
 package com.fiec.sspia.mclass;
 
-import android.app.Activity;
+import android.app.NotificationManager;
+import android.content.Context;
 
 import com.fiec.sspia.buff.DefaultNoti;
+import com.fiec.sspia.util.TempClass;
 
 public class SSNotific extends DefaultNoti{
 
-	public SSNotific(Activity act, String type) {
-		super(act, type);
+	public SSNotific(Context act, NotificationManager nm, String type) {
+		super(act, nm, type);
 	}
 	
 	@Override
-	public void initialize(Class<?> myclass) {
+	public void initialize(Class<?> myclass, TempClass temp) {
 		super.myclass = myclass;
+		super.temp = temp;
 		getRes();
-		setParams();
+		//setParams();
 		switching();
 	}
 

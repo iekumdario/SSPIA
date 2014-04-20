@@ -9,7 +9,7 @@
     <string name="drawer_close"></string>
     <string name="defaulttype">default</string>
     <string name="customtype">custom</string>
-    <string name="marsinfo1">Thanks to Curiosity rover on mars, we can get updated information about mars temperatures</string>
+    <string name="marsinfo1">Notifications</string>
     <string name="marsinfo2">Notify me when mars temperature is in this range:</string>
     <string name="tempmax">Max.</string>
     <string name="tempmin">Min.</string>
@@ -21,6 +21,7 @@
     <string name="info_app">The temperatures are approximate. Calculation based on minimum and maximum values. Sources:</string>
     <string name="link_nasa">pds.jpl.nasa.gov/planets/special/planets.htm</string>
     <string name="others">and others.</string>
+    <string name="servicename">sspiaservice</string>
     
     <string name="sat_infotab">Notable Satellites</string>
     
