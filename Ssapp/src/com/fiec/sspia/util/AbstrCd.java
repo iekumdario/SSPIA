@@ -58,13 +58,13 @@ public abstract class AbstrCd{
 		dialog.setContentView(content);
 	}
 	
-	public void setDefaultDialog(Bundle bundle, int pos){	
+	public void setDefaultDialog(Bundle bundle, String[] info, int pos, int realpos){	
 		String[] res ={bundle.getStringArray(_KEYS[2])[0], bundle.getStringArray(_KEYS[2])[2],
 				bundle.getStringArray(_KEYS[2])[3], bundle.getStringArray(_KEYS[2])[4]};
 		sattitle.setText(bundle.getStringArray(_KEYS[0])[pos]);		
 		satimage.setImageResource(bundle.getIntArray(_KEYS[1])[pos]);
 		listinfo.setAdapter(new CustomInfoAdapter(context, res, _TAG));
-		satinfo.setText("Discovered by Galileo Galilei on 7 January, 1610, using a 20x-power, refracting telescope at the University of Padua.");
+		satinfo.setText(info[realpos]);
 	}
 	
 	public abstract void showdialog();

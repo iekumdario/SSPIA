@@ -31,7 +31,7 @@ public class SatellitesClass extends Fragment implements OnItemClickListener{
 	private FragmentActivity context;
 	private String pname;
 	private int ppos;
-	private String[]satellites;
+	private String[]satellites, z_xinfo;
 	private int[]images;	
 	private View content;
 	private CdClass cd;
@@ -49,6 +49,7 @@ public class SatellitesClass extends Fragment implements OnItemClickListener{
 		this.ppos = TabsPlanets.pos;
 		this.satellites = context.getResources().getStringArray(R.array.satellites);
 		this.images = context.getResources().getIntArray(R.array.satellitesimg);
+		this.z_xinfo = context.getResources().getStringArray(R.array.z_xinfo);
 		this.bundle = new Bundle();
 		this.transition = new TransitionClass(context, satellites, images);
 		this.transition.setParams(pname, ppos);
@@ -67,11 +68,12 @@ public class SatellitesClass extends Fragment implements OnItemClickListener{
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
+		int[] pos;
 		content = inflater.inflate(_RVIEW, null);
-		this.transition.setParams(pname, ppos, position);
+		pos = this.transition.setParams(pname, ppos, position);
 		this.bundle = this.transition.getParams();
 		cd = new CdClass(context, content);
-		cd.setAttr(bundle, position);
+		cd.setAttr(bundle, z_xinfo, position, pos[position]-1);
 		cd.showdialog();
 	}
 }

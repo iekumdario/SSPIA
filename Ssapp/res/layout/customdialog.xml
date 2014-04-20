@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="20dp"
-    android:background="@android:color/transparent" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/z_customback_moondialog"
+    android:paddingBottom="10dp" >
 
-    <EditText
-        android:id="@+id/editText1"
+    <View
+        android:id="@+id/dividerhori"
+        style="@style/horizontalline"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:shadowColor="#101010"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2" />
+
+    <CheckBox
+        android:id="@+id/notify_checkstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tempmed"
-        android:layout_marginLeft="17dp"
-        android:layout_toRightOf="@+id/tempmed"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dividerhori"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/marsinfo2"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/marsinfo1"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/notify_maxtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/notify_mintemp"
+        android:layout_below="@+id/notify_checkstatus"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="14dp"
         android:background="@drawable/x_customtextfield"
         android:ems="10"
+        android:hint="@string/tempmax"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:paddingLeft="5dp" />
+
+    <EditText
+        android:id="@+id/notify_mintemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notify_maxtemp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/x_customtextfield"
+        android:ems="10"
+        android:hint="@string/tempmin"
         android:inputType="phone"
         android:paddingLeft="5dp"
         android:singleLine="true" >
 
-        <requestFocus />
     </EditText>
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/editText1"
-        android:background="@drawable/x_customtextfield"
-        android:ems="10"
-        android:inputType="number|numberSigned|numberDecimal"
-        android:paddingLeft="5dp" />
-
-    <TextView
-        android:id="@+id/tempmed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="64dp"
-        android:singleLine="true"
-        android:text="Max"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tempmed"
-        android:layout_marginTop="31dp"
-        android:layout_toLeftOf="@+id/editText1"
-        android:text="Min"
-        android:textSize="17sp" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Notify me when mars temperature is in this range:" />
 
 </RelativeLayout>

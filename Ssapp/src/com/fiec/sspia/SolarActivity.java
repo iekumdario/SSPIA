@@ -49,7 +49,8 @@ public class SolarActivity extends FragmentActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch(item.getItemId()){
-    	case R.id.action_settings: new SetttingsClass(this);
+    	case R.id.action_settings: new SetttingsClass(this).isNoty(); break;
+    	case R.id.about: new SetttingsClass(this).isAbout();
     	}
         if (SSClass.drawerToggle.onOptionsItemSelected(item)) {
             return true;
@@ -85,9 +86,7 @@ public class SolarActivity extends FragmentActivity{
 		if (firstini() == true) {
 			String[] planets = this.getResources().getStringArray(R.array.theplanets);
 			int[] inits = this.getResources().getIntArray(R.array.planetscode);
-			Log.w("gmaTag", "inits=" + inits.length);
 			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
-			Log.w("gmaTag", "inits2=" + inits2.length);
 			String[] dats;
 			db.open();
 			db.createPlanets(planets);
@@ -98,7 +97,6 @@ public class SolarActivity extends FragmentActivity{
 
 			for (int i = 0; i < inits.length; i++) {
 				dats = this.getResources().getStringArray(inits[i]);
-				Log.w("gmaTag", "dats = " + dats[i]);
 				db.create(dats);
 			}
 			for (int i = 0; i < inits2.length; i++) {
@@ -120,7 +118,7 @@ public class SolarActivity extends FragmentActivity{
     @Override
     protected void onPause() {
     	super.onPause();
-    	this.finish();
+    	//this.finish();
     }
     
     @Override

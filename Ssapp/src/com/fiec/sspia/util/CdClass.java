@@ -11,9 +11,9 @@ public class CdClass extends AbstrCd implements OnClickListener{
 		super(act, content);
 	}
 	
-	public void setAttr(Bundle bundle, int pos){	
+	public void setAttr(Bundle bundle, String[] z_xinfo, int pos, int realpos){	
 		super.setDialogContent(true, true);
-		super.setDefaultDialog(bundle, pos);
+		super.setDefaultDialog(bundle, z_xinfo, pos, realpos);
 		this._WIDTH = (int) (metr.widthPixels * 0.85);
 		this._HEIGHT = (int) (metr.heightPixels * 0.60);
 		this.params.width = _WIDTH;

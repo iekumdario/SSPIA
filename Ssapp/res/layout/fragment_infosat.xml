@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:text="@string/sat_infotab"
         android:textColor="#ffffff"
         android:textSize="17sp" />
@@ -22,8 +23,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
+        android:horizontalSpacing="5dp"
         android:listSelector="@drawable/x_customselector"
-        android:numColumns="3" >
+        android:numColumns="2" >
 
     </GridView>
 

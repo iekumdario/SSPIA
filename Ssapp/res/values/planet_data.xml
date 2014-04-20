@@ -475,4 +475,31 @@
         <item>null</item>
         <item>null</item>
     </string-array>
+    
+    <string-array name="z_xinfo">
+        <item >Discovered by Asaph Hall, Sr. at the United States Naval Observatory in Washington, D.C. on 12 august 1877.</item>
+        <item >Discovered by Astronomer Asaph Hall on 18 august 1877, at the United States Naval Observatory in Washington, D.C.</item>
+        
+        <item >Discovered by Galileo Galilei on january 8, 1610.</item>
+        <item >Discovered by Galileo Galilei on january 8, 1610.</item>
+        <item >Discovered by Galileo Galilei on january 7, 1610.</item>
+        <item >Discovered by Galileo Galilei on january 7, 1610.</item>
+        
+        <item >Discovered by the astronomer William Herschel on 17 september 1789 using his  forty-foot telescope.</item>
+        <item >Discovered by Fredrick William Herschel on august 28, 1789, during the first use of his new 1.2 m (47 in) telescope.</item>
+        <item >Discovered by Giovanni Domenico Cassini in 1684 together with Dione, another moon of Saturn using a large aerial telescope.</item>
+        <item >Discovered by Cassini, march 21, 1684. Cassini found Dione using a large aerial telescope.</item>
+        <item >Discovered in 1672 by Giovanni Domenico Cassini. Is the second-largest moon of saturn and the ninth-largest moon in the solar system.</item>
+        <item >Discovered on march 25, 1655, by the Dutch Astronomer Christiaan Huygens using the first telescope he and his brother built.</item>
+    	<item >Discovered by Giovanni Domenico Cassini, an Italian–French Astronomer, in october 1671.</item>
+    	
+    	<item >Discovered by William Herschel on january 11, 1787, the same day he discovered Uranus´s second largest moon, Oberon.</item>
+    	<item >Discovered by William Herschel on january 11, 1787; on the same day he discovered Uranus´s largest moon, Titania.</item>
+    	<item >Discovered on october 24, 1851, by William Lassell.</item>
+    	<item >Discovered on 24 october 1851 by William Lassell, it is named for a sky spirit in Alexander Pope´s The Rape Of The Lock and Shakespeare´s the Tempest.</item>
+    	<item >Discovered by Gerard Kuiper on february 16, 1948 at McDonald Observatory.</item>
+    	
+    	<item >Discovered on october 10, 1846, by English Astronomer William Lassell. It is the only large moon in the Solar System with a Retrograde Orbit, which is an orbit in the opposite direction to its Planet´s Rotation.</item>
+    </string-array>
+    
 </resources>

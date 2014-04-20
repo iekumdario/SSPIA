@@ -19,13 +19,14 @@ public class TransitionClass {
 		db = new SolarDb(act);
 	}
 	
-	public void setParams(String pname, int pos, int pos2){
+	public int[] setParams(String pname, int pos, int pos2){
 		this.db.open();
 		pos = db.getIdbyPname(pname);
 		this.aux = db.getSatellitesByPlanetId(pos);
 		this.aux2 = db.getRealSatBySatellitesId(aux[pos2]);
 		this.arg5 = db.getSatDetails(aux2+1);
 		this.db.close();
+		return aux;
 	}
 	
 	public void setParams(String pname, int pos){
