@@ -3,7 +3,7 @@ SSPIA (Solar System Planets Information App)
 This is an Android application that is solving the following challenge for the Nasa Space Apps Challenge
 http://goo.gl/Pq512e
 
-Consists in giving the possible info of the Solar System Planets and moons.
+Using data from MAAS API and other sources this app shows basic information of planets of the solar system and their most notable satellites. Users can get notified when temperature is in a specified range if it were "earth time" on the specified planet. Calculations are done based on the maximum and minimum temperatures of each planet and the time on the earth. The default temperature range for the notification is the range possible for human habitation.
 
 Data Sources:       
 http://marsweather.ingenology.com/      
