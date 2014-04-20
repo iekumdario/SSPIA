@@ -21,7 +21,7 @@
     <string name="info_app">The temperatures are approximate. Calculation based on minimum and maximum values. Sources:</string>
     <string name="link_nasa">pds.jpl.nasa.gov/planets/special/planets.htm</string>
     <string name="others">and others.</string>
-    <string name="servicename">sspiaservice</string>
+    <string name="servicename">sspiaservice</string>    
     
     <string name="sat_infotab">Notable Satellites</string>
     

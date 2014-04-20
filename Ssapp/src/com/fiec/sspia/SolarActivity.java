@@ -50,7 +50,6 @@ public class SolarActivity extends FragmentActivity{
 	@Override
 	protected void onResume() {
 		super.onResume();
-		Log.w("gmaTag", "is = "+_isAct);
 		if(getIsAct().equals("off")){
 			Intent intent = new Intent(this, SspiaService.class);
 			bindService(intent, connect, Context.BIND_AUTO_CREATE);
@@ -60,9 +59,7 @@ public class SolarActivity extends FragmentActivity{
 					PendingIntent.FLAG_CANCEL_CURRENT);
 			Calendar cal = Calendar.getInstance();
 			service.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-					1000*60, pintent);
-			//db = new SolarDb(getApplicationContext());
-			//db.open();
+					3600*6, pintent);
 			db.updateLogIsact("on");
 			db.close();
 		}		
@@ -78,6 +75,7 @@ public class SolarActivity extends FragmentActivity{
 	@Override
 	protected void onPause() {
 		super.onPause();
+		this.finish();
 		//unbindService(connect);
 	}
 
@@ -173,6 +171,12 @@ public class SolarActivity extends FragmentActivity{
 		}
 	}
     
+	@Override
+	protected void onStop() {
+		super.onStop();
+		this.finish();
+	}
+	
     @Override
     public void onBackPressed() {
     	super.onBackPressed();
