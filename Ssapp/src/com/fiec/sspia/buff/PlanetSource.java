@@ -36,15 +36,36 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 	
 	public PlanetSource(FragmentActivity act, ListView info, String pname){
 		db = new SolarDb(act.getApplicationContext());
-		
-		int id;
+		int id,i=0,j=0, nulos=0;
 		db.open();
 		id = db.getIdbyPname(pname);
 		String[] res = db.getDetails(id);
 		dats = act.getResources().getStringArray(R.array.fields);
 		db.updatetemp(id, res[0], res[1], res[2]);
 		res = db.getDetails(id);
-		adapter = new CustomInfoAdapter(act, res, dats);
+		//chequeo gallo
+		for(i=0;i<res.length;i++){
+			if(res[i].compareTo("null") == 0)
+				nulos++;
+			else
+				continue;
+			}
+		String[] resf = new String[res.length-nulos];
+		String[] datsf = new String[res.length-nulos];
+		j=i=0;
+		while(j<res.length){
+			if(res[j].compareTo("null") == 0){
+				j++;
+				continue;
+				}
+			else{
+				resf[i]=res[j];
+				datsf[i]=dats[j];
+				j++;
+				i++;
+				}
+			}
+		adapter = new CustomInfoAdapter(act, resf, datsf);
 		info.setAdapter(adapter);
 		db.close();
 		

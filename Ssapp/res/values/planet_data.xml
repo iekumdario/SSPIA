@@ -35,9 +35,9 @@
     </string-array>
 
     <string-array name="venus">
-        <item> 420</item>
-        <item>463.85</item>
-        <item>−220</item>
+        <item>-220</item>
+        <item>100</item>
+        <item>420</item>
         <item>no</item>
         <item>rocky desert with craters</item>
         <item>4.87 x 1024</item>
