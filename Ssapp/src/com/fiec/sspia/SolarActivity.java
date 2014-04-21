@@ -72,7 +72,6 @@ public class SolarActivity extends FragmentActivity{
 	@Override
 	protected void onPause() {
 		super.onPause();
-		this.finish();
 		//unbindService(connect);
 	}
 

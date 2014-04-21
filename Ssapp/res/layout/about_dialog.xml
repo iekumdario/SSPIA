@@ -70,28 +70,30 @@
         android:typeface="sans" />
     
      <TextView
-        android:id="@+id/TextView05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView01"
-        android:layout_below="@+id/TextView02"
-        android:layout_marginTop="23dp"
-        android:text="@string/info_app"
-        android:textColor="@android:color/secondary_text_dark_nodisable"
-        android:textSize="15sp"
-        android:typeface="monospace" />
+         android:id="@+id/TextView05"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/TextView01"
+         android:layout_below="@+id/TextView02"
+         android:layout_marginTop="23dp"
+         android:paddingRight="10dp"
+         android:text="@string/info_app"
+         android:textColor="@android:color/secondary_text_dark_nodisable"
+         android:textSize="15sp"
+         android:typeface="monospace" />
      
       <TextView
-        android:id="@+id/TextView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView01"
-        android:layout_below="@+id/TextView05"
-        android:text="@string/link_nasa"
-        android:autoLink="web"
-        android:textColor="@android:color/secondary_text_dark_nodisable"
-        android:textSize="15sp"
-        android:typeface="monospace" />
+          android:id="@+id/TextView06"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/TextView01"
+          android:layout_below="@+id/TextView05"
+          android:autoLink="web"
+          android:paddingRight="10dp"
+          android:text="@string/link_nasa"
+          android:textColor="@android:color/secondary_text_dark_nodisable"
+          android:textSize="15sp"
+          android:typeface="monospace" />
       
       <TextView
         android:id="@+id/TextView07"
