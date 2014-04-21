@@ -27,10 +27,7 @@ import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
 public class SolarActivity extends FragmentActivity{
-	private boolean _isAct = false;
 	private String _isChk = "false";
-	private double _MIN = 0;
-	private double _MAX = 0;
 	private SolarDb db;
 	private SSClass clase;
 	public IRemoteService serv;
@@ -58,8 +55,8 @@ public class SolarActivity extends FragmentActivity{
 			PendingIntent pintent = PendingIntent.getService(this, 0, in, 
 					PendingIntent.FLAG_CANCEL_CURRENT);
 			Calendar cal = Calendar.getInstance();
-			service.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-					3600*6, pintent);
+			service.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
+					AlarmManager.INTERVAL_HOUR*6, pintent);
 			db.updateLogIsact("on");
 			db.close();
 		}		
