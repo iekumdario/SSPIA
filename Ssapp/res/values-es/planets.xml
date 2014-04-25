@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theplanets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>The Moon</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    
+    <string-array name="satellites">
+        <item>Deimos</item>
+        <item>Phobos</item>
+        <item>Io</item>
+        <item>Europa</item>
+        <item>Ganimedes</item>
+        <item>Callisto</item>
+        <item>Mimas</item>
+        <item>Enceladus</item>
+        <item>Tethys</item>
+        <item>Dione</item>
+        <item>Rhea</item>
+        <item>Titan</item>
+        <item>Iapetus</item>
+        <item>Titania</item>
+        <item>Oberon</item>
+        <item>Umbriel</item>
+        <item>Ariel</item>
+        <item>Miranda</item>
+        <item>Triton</item>
+    </string-array>
+    
+    <integer-array name="satelliteplanet">
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+        <item>8</item>
+    </integer-array>
+    
+    <integer-array name="theimages">
+        <item >2130837510</item>
+        <item >2130837515</item>
+        <item >2130837511</item>
+        <item >2130837509</item>
+        <item >2130837508</item>
+        <item >2130837513</item>
+        <item >2130837514</item>
+        <item >2130837512</item>
+    </integer-array>
+    
+    <integer-array name="planetscode">
+        <item>2131099649</item>
+        <item>2131099650</item>
+        <item>2131099651</item>
+        <item>2131099652</item>
+        <item>2131099655</item>
+        <item>2131099660</item>
+        <item>2131099668</item>
+        <item>2131099674</item>
+    </integer-array>
+
+        
+    <integer-array name="satcode">
+        <item>2131099653</item><!-- mars -->
+        <item>2131099654</item>
+        <item>2131099656</item><!-- jupiter -->
+        <item>2131099657</item> 
+        <item>2131099658</item>
+        <item>2131099659</item>
+        <item>2131099661</item><!-- saturn -->
+        <item>2131099662</item>
+        <item>2131099662</item>
+        <item>2131099664</item>
+        <item>2131099665</item>
+        <item>2131099666</item>
+        <item>2131099667</item>
+        <item>2131099669</item><!-- uranus -->
+        <item>2131099670</item>
+        <item>2131099671</item>
+        <item>2131099672</item>
+        <item>2131099673</item>
+        <item>2131099675</item><!-- neptune -->
+   </integer-array>    
+   
+    <integer-array name="satellitesimg">
+        <!--x_moon_deimos--><item>2130837520</item>
+        <!--x_moon_phobos--><item>2130837530</item>
+        <!--x_moon_io--><item>2130837526</item>
+        <!--x_moon_europa--><item>2130837523</item>
+		<!--x_moon_ganimedes--><item>2130837524</item>
+		<!--x_moon_callisto--><item>2130837519</item>
+		<!--x_moon_mimas--><item>2130837527</item>
+		<!--x_moon_enceladus--><item>2130837522</item>
+		<!--x_moon_tethys--><item>2130837532</item>
+		<!--x_moon_dione--><item>2130837521</item>
+		<!--x_moon_rhea--><item>2130837531</item>
+		<!--x_moon_titan--><item>2130837533</item>
+		<!--x_moon_Lapetus--><item>2130837525</item>
+		<!--x_moon_titania--><item>2130837534</item>
+		<!--x_moon_oberon--><item>2130837529</item>
+		<!--x_moon_umbriel--><item>2130837536</item> 
+        <!--x_moon_ariel--><item>2130837518</item>		
+		<!--x_moon_miranda--><item>2130837528</item>		
+		<!--x_moon_triton--><item>2130837535</item>
+		       
+    </integer-array>    
+</resources>

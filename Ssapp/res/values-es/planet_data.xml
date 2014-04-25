@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="fields">
+    <item>Temperatura Max</item>
+    <item>Temperatura Med</item>
+    <item>Temperatura Mín</item>
+    <item>Cubierto de hielo</item>
+    <item>Tipo de superficie</item>
+    <item>Masa (kg)</item>
+    <item>Diámetro (km)</item>
+    <item>Densidad media</item>
+    <item>Velocidad de escape (m/s)</item>
+    <item>Distancia promedio del Sol</item>
+    <item>Período de rotación</item>
+    <item>Oblicuidad (inclinación del eje en grados)</item>
+    <item>Inclinación de la órbita (grados)</item>
+    <item>Excentricidad de la órbita (desviación de la circular)</item>
+  </string-array>
+  <string-array name="mercury">
+    <item>426,8</item>
+    <item>66.85</item>
+    <item>-173.15</item>
+    <item>no</item>
+    <item>rocosa con cráteres</item>
+    <item>3,3 x 10e23</item>
+    <item>4879.4</item>
+    <item>5420</item>
+    <item>4300</item>
+    <item>57.909.175 km</item>
+    <item>58.65</item>
+    <item>0</item>
+    <item>7</item>
+    <item>0.206</item>
+  </string-array>
+  <string-array name="venus">
+    <item>-220</item>
+    <item>100</item>
+    <item>420</item>
+    <item>no</item>
+    <item>desértica/rocosa con cráteres</item>
+    <item>4.87 x 1024</item>
+    <item>12104</item>
+    <item>5250</item>
+    <item>10400</item>
+    <item>108.208.930 km</item>
+    <item>243.02 retrógrada</item>
+    <item>178</item>
+    <item>3.39</item>
+    <item>0.007</item>
+  </string-array>
+  <string-array name="moon">
+    <item>116.85</item>
+    <item>-53.15</item>
+    <item>-173.15</item>
+    <item>no</item>
+    <item>rocosa con cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="mars">
+    <item>-22</item>
+    <item>-52</item>
+    <item>-82</item>
+    <item>no</item>
+    <item>rocosa</item>
+    <item>6,42 x 10e23</item>
+    <item>6787</item>
+    <item>3940</item>
+    <item>5000</item>
+    <item>227.936.640 km</item>
+    <item>1.026</item>
+    <item>25</item>
+    <item>1.85</item>
+    <item>0.093</item>
+  </string-array>
+  <string-array name="deimos">
+    <item>-30</item>
+    <item>-40</item>
+    <item>-50</item>
+    <item>no</item>
+    <item>rocosa</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="phobos">
+    <item>-30</item>
+    <item>-40</item>
+    <item>-50</item>
+    <item>no</item>
+    <item>rocosa</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="jupiter">
+    <item>-75</item>
+    <item>-121</item>
+    <item>-163</item>
+    <item>no</item>
+    <item>gaseosa</item>
+    <item>1,90 x 10e27</item>
+    <item>142800</item>
+    <item>1314</item>
+    <item>59500</item>
+    <item>778412020 km</item>
+    <item>0.41</item>
+    <item>3.08</item>
+    <item>1.3</item>
+    <item>0.048</item>
+  </string-array>
+  <string-array name="io">
+    <item>-133</item>
+    <item>-143.15</item>
+    <item>-153</item>
+    <item>no</item>
+    <item>rocosa con volcanes</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="europa">
+    <item>-163</item>
+    <item>null</item>
+    <item>-223</item>
+    <item>sí</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="ganimedes">
+    <item>-150</item>
+    <item>-160</item>
+    <item>-170</item>
+    <item>sí</item>
+    <item>rocosa y cubierta de hielo</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="callisto">
+    <item>-108</item>
+    <item>-139</item>
+    <item>-193</item>
+    <item>sí</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="saturn">
+    <item>-139</item>
+    <item>null</item>
+    <item>-193</item>
+    <item>no</item>
+    <item>rocosa con hielo</item>
+    <item>5,69 x 10e26</item>
+    <item>120660</item>
+    <item>690</item>
+    <item>35600</item>
+    <item>1426725400 km</item>
+    <item>0.44</item>
+    <item>26.7</item>
+    <item>2.49</item>
+    <item>0.056</item>
+  </string-array>
+  <string-array name="mimas">
+    <item>-190</item>
+    <item>-209</item>
+    <item>-210</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="enceladus">
+    <item>-128</item>
+    <item>-198</item>
+    <item>-240</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="tethys">
+    <item>-170</item>
+    <item>-187</item>
+    <item>-197</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="dione">
+    <item>-175</item>
+    <item>-186</item>
+    <item>-195</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="rhea">
+    <item>-174</item>
+    <item>null</item>
+    <item>-220</item>
+    <item>sí</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="titan">
+    <item>-170</item>
+    <item>-179</item>
+    <item>-190</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="lapetus">
+    <item>-143</item>
+    <item>null</item>
+    <item>-183</item>
+    <item>sí</item>
+    <item>hielo y roca cubierto por el gas</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="uranus">
+    <item>-205.2</item>
+    <item>null</item>
+    <item>-224</item>
+    <item>no</item>
+    <item>mayormente de hielo</item>
+    <item>8,68 x 10e25</item>
+    <item>51118</item>
+    <item>1290</item>
+    <item>21300</item>
+    <item>2870972200 km</item>
+    <item>0.72</item>
+    <item>97.9</item>
+    <item>0.77</item>
+    <item>0.047</item>
+  </string-array>
+  <string-array name="titania">
+    <item>-190</item>
+    <item>-203</item>
+    <item>-210</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="oberon">
+    <item>-183</item>
+    <item>-193</item>
+    <item>-200</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="umbriel">
+    <item>-188</item>
+    <item>null</item>
+    <item>-198</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="ariel">
+    <item>-188</item>
+    <item>null</item>
+    <item>-213</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="miranda">
+    <item>-188</item>
+    <item>null</item>
+    <item>-213</item>
+    <item>parcial</item>
+    <item>rocosa con hielo y cráteres</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="neptune">
+    <item>-220</item>
+    <item>null</item>
+    <item>-221</item>
+    <item>no</item>
+    <item>gaseosa</item>
+    <item>1,02 x 10e26</item>
+    <item>49528</item>
+    <item>1640</item>
+    <item>23300</item>
+    <item>4498252900 km</item>
+    <item>0,67 o 19,1 horas</item>
+    <item>29.6</item>
+    <item>1.77</item>
+    <item>0.009</item>
+  </string-array>
+  <string-array name="triton">
+    <item>-225</item>
+    <item>-235</item>
+    <item>-245</item>
+    <item>sí</item>
+    <item>gaseoso con núcleo de hielo</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="z_xinfo">
+    <item>Descubierto por Asaph Hall en el Observatorio Naval de Estados Unidos en Washington, DC el 12 de agosto de 1877.</item>
+    <item>Descubierto por el astrónomo Asaph Hall el 18 de agosto de 1877, en el Observatorio Naval de Estados Unidos en Washington, DC</item>
+    <item>Descubierta por Galileo Galilei el 8 de enero de 1610.</item>
+    <item>Descubierta por Galileo Galilei el 8 de enero de 1610.</item>
+    <item>Descubierta por Galileo Galilei el 7 de enero de 1610.</item>
+    <item>Descubierta por Galileo Galilei el 7 de enero de 1610.</item>
+    <item>Descubierto por el astrónomo William Herschel el 17 de septiembre de 1789 usando el telescopio de doce metros.</item>
+    <item>Descubierto por Fredrick William Herschel el 28 de agosto 1789, durante el primer uso de su nuevo telescopio de 1,2 m (47 pulgadas).</item>
+    <item>Descubierto por Giovanni Domenico Cassini en 1684 junto con Dione, otra luna de Saturno utilizando un gran telescopio de antena.</item>
+    <item>Descubierto por Cassini, 21 de marzo 1684. Cassini descubrió Dione usando un gran telescopio aéreo.</item>
+    <item>Descubierta en 1672 por Giovanni Domenico Cassini. Es la segunda luna más grande de Saturno y la novena luna más grande del sistema solar.</item>
+    <item>Descubierto el 25 de marzo 1655, por el astrónomo holandés Christiaan Huygens con el primer telescopio que él y su hermano construyeron.</item>
+    <item>Descubierto por Giovanni Domenico Cassini, astrónomo franco-italiano, en octubre de 1671.</item>
+    <item>Descubierto por William Herschel el 11 de enero 1787, el mismo día que descubrió la segunda luna más grande de Urano, Oberón.</item>
+    <item>Descubierto por William Herschel el 11 de enero 1787 ; el mismo día que descubrió la luna más grande de Urano, Titania.</item>
+    <item>Descubierto el 24 de octubre de 1851, por William Lassell.</item>
+    <item>Descubierto el 24 de octubre 1851 por William Lassell, que lleva el nombre de un espíritu del cielo en el poema de Alexander Pope "La Violación de la cerradura" y "La Tempestad" de Shakespeare.</item>
+    <item>Descubierto por Gerard Kuiper en 16 de febrero 1948 en el Observatorio McDonald.</item>
+    <item>Descubierto el 10 de octubre de 1846, por el astrónomo Inglés William Lassell. Es la única luna grande en el Sistema Solar con una órbita retrógrada, que es una órbita en la dirección opuesta a la rotación del planeta.</item>
+  </string-array>
+</resources>
