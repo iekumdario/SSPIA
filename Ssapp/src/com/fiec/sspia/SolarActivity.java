@@ -56,8 +56,8 @@ public class SolarActivity extends FragmentActivity{
 					PendingIntent.FLAG_CANCEL_CURRENT);
 			Calendar cal = Calendar.getInstance();
 			service.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-					AlarmManager.INTERVAL_HOUR*6, pintent);
-			db.updateLogIsact("on");
+					AlarmManager.INTERVAL_HOUR, pintent);
+			//db.updateLogIsact("on");
 			db.close();
 		}		
 		else db.close();
@@ -161,7 +161,7 @@ public class SolarActivity extends FragmentActivity{
 			}
 			
 			 aux = db.getMarsTemp(db.getIdbyPname("Mars"));
-			 db.createLog("off", "false", aux[0], aux[1]);
+			 db.createLog("off", "true", aux[0], aux[1]);
 			 _isChk = db.getIsCheck();
 			db.close();
 		}
@@ -170,7 +170,7 @@ public class SolarActivity extends FragmentActivity{
 	@Override
 	protected void onStop() {
 		super.onStop();
-		this.finish();
+		//this.finish();
 	}
 	
     @Override

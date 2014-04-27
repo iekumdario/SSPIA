@@ -1,5 +1,7 @@
 package com.fiec.sspia.buff;
 
+import java.util.Calendar;
+
 import com.fiec.ssapp.R;
 import com.fiec.sspia.SolarActivity;
 import com.fiec.sspia.TabsPlanets;
@@ -74,9 +76,10 @@ public abstract class DefaultNoti implements SSInterfaceNoti{
 	}
 	
 	private void setDefaultNotifi(){
+		//Calendar calendar = Calendar.getInstance();
 		notifi = new Intent(act, myclass);
 		expand.setTextViewText(R.id.expandtext, "If this were this hour On Mars the temperature "
-       			+ "would be "+temp.Temper()+"ºC");
+       			+ "would be "+temp.Temper()+"ºC at "+Calendar.getInstance().getTime());
 		expand.setTextViewText(R.id.expandtitle, "Message from SSPIA");
 	       
 	    Bitmap remote_picture = BitmapFactory.decodeResource(act.getResources(), R.drawable.ic_launcher);
