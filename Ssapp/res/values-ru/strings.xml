@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-     <string name="app_name">SSPIA</string>
+	<string name="app_name">SSPIA</string>
     <string name="title_app">Solar System Planets Information App</string>
-    <string name="action_settings">Настройки</string>
-    <string name="about">О програме</string>
-    <string name="drawer_open">Солнечная система</string>
+    <string name="action_settings">РќР°СЃС‚СЂРѕР№РєРё</string>
+    <string name="about">Рћ РїСЂРѕРіСЂР°РјРјРµ</string>
+    <string name="drawer_open">РЎРѕР»РЅРµС‡РЅР°СЏ СЃРёСЃС‚РµРјР°</string>
     <string name="drawer_close"></string>
     <string name="defaulttype">default</string>
     <string name="customtype">custom</string>
-    <string name="marsinfo1">Уведомления</string>
-    <string name="marsinfo2">Предупредить когда температура на марсе будет в этом ранге:</string>
-    <string name="tempmax">Макс.</string>
-    <string name="tempmin">Мин.</string>
-    <string name="info_title">Разработчики</string>
+    <string name="marsinfo1">РЈРІРµРґРѕРјР»РµРЅРёСЏ</string>
+    <string name="marsinfo2">Notificarme cuando la temperatura de marte estГ© en este rango:</string>
+    <string name="tempmax">РњР°РєСЃ</string>
+    <string name="tempmin">РњРёРЅ</string>
+    <string name="info_title">Р Р°Р·СЂР°Р±РѕС‚С‡РёРєРё</string>
     <string name="info_first">Alexey Evdokimov</string>
-    <string name="info_second">Jose Quintero</string>
-    <string name="info_third">Daniel Martinez</string>
+    <string name="info_second">JosГ© Quintero</string>
+    <string name="info_third">Daniel MartГ­nez</string>
     <string name="info_email">sspiateam@gmail.com</string>
-    <string name="info_app">Температуры приблизительные. Расчет сделан по максимальным и минимальным температурам. Данные взяты с:</string>
+    <string name="info_app">РўРµРјРїРµСЂР°С‚СѓСЂС‹ СЏРІР»СЏСЋС‚СЃСЏ РїСЂРёР±Р»РёР·РёС‚РµР»СЊРЅС‹РјРё. Р Р°СЃС‡РµС‚ СЃРґРµР»Р°РЅ СЃ РјРёРЅРёРјР°Р»СЊРЅС‹РјРё Рё РјР°РєСЃРёРјР°Р»СЊРЅС‹РјРё РґР°РЅРЅС‹РјРё. РСЃС‚РѕС‡РЅРёРєРё:</string>
     <string name="link_nasa">pds.jpl.nasa.gov/planets/special/planets.htm</string>
-    <string name="others">и другие.</string>
+    <string name="others">Рё РґСЂСѓРіРёРµ.</string>
     <string name="servicename">sspiaservice</string>
     <string name="version">0.1.6</string>
-    <string name="loading">Первый запуск</string>
-    <string name="created">Сделано для Nasa Space apps challenge.</string>
+    <string name="loading">РџРµСЂРІС‹Р№ Р·Р°РїСѓСЃРє.</string>
+    <string name="created">РЎРґРµР»Р°РЅРѕ РґР»СЏ Nasa Space apps challenge.</string>
     
     
-    <string name="sat_infotab">Спутники</string>
+    <string name="sat_infotab">РЎРїСѓС‚РЅРёРєРё</string>
     
     <string-array name="fromcuriositi">
         <item >"terrestrial_date"</item>
