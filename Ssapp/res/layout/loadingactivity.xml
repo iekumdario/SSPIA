@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/z_z_loadingbackground">
 
     <ProgressBar
         android:id="@+id/loading_progress"
@@ -19,6 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/loading" />
+        android:text="@string/loading"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
 </RelativeLayout>
