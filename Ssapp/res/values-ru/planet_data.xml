@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="fields">
+    <item>Максимальная температура</item>
+    <item>Средняя температура</item>
+    <item>Минимальная температура</item>
+    <item>Покрыта льдом</item>
+    <item>Тип поверхности</item>
+    <item>Вес (kg)</item>
+    <item>Диаметр (km)</item>
+    <item>Средняя плотность</item>
+    <item>Скорость (m/s)</item>
+    <item>Дистанция от солнца</item>
+    <item>Время вращения</item>
+    <item>Наклонение (наклон оси градусов)</item>
+    <item>Наклонение орбиты (в градусах)</item>
+    <item>Орбитальная эксцентриситет (отклонение от круговой)</item>
+  </string-array>
+  <string-array name="mercury">
+    <item>426,8</item>
+    <item>66.85</item>
+    <item>-173.15</item>
+    <item>Нет</item>
+    <item>скалистая с кратерами </item>
+    <item>3,3 x 10e23</item>
+    <item>4879.4</item>
+    <item>5420</item>
+    <item>4300</item>
+    <item>57.909.175 km</item>
+    <item>58.65</item>
+    <item>0</item>
+    <item>7</item>
+    <item>0.206</item>
+  </string-array>
+  <string-array name="venus">
+    <item>-220</item>
+    <item>100</item>
+    <item>420</item>
+    <item>Нет</item>
+    <item>пустынная/скалистая с кратерами </item>
+    <item>4.87 x 1024</item>
+    <item>12104</item>
+    <item>5250</item>
+    <item>10400</item>
+    <item>108.208.930 km</item>
+    <item>243.02 ретроградный</item>
+    <item>178</item>
+    <item>3.39</item>
+    <item>0.007</item>
+  </string-array>
+  <string-array name="moon">
+    <item>116.85</item>
+    <item>-53.15</item>
+    <item>-173.15</item>
+    <item>Нет</item>
+    <item>скалистая с кратерами </item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="mars">
+    <item>-22</item>
+    <item>-52</item>
+    <item>-82</item>
+    <item>Нет</item>
+    <item>скалистая</item>
+    <item>6,42 x 10e23</item>
+    <item>6787</item>
+    <item>3940</item>
+    <item>5000</item>
+    <item>227.936.640 km</item>
+    <item>1.026</item>
+    <item>25</item>
+    <item>1.85</item>
+    <item>0.093</item>
+  </string-array>
+  <string-array name="deimos">
+    <item>-30</item>
+    <item>-40</item>
+    <item>-50</item>
+    <item>Нет</item>
+    <item>скалистая</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="phobos">
+    <item>-30</item>
+    <item>-40</item>
+    <item>-50</item>
+    <item>Нет</item>
+    <item>скалистая</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="jupiter">
+    <item>-75</item>
+    <item>-121</item>
+    <item>-163</item>
+    <item>Нет</item>
+    <item>газообразная</item>
+    <item>1,90 x 10e27</item>
+    <item>142800</item>
+    <item>1314</item>
+    <item>59500</item>
+    <item>778412020 km</item>
+    <item>0.41</item>
+    <item>3.08</item>
+    <item>1.3</item>
+    <item>0.048</item>
+  </string-array>
+  <string-array name="io">
+    <item>-133</item>
+    <item>-143.15</item>
+    <item>-153</item>
+    <item>Нет</item>
+    <item>скалистая con volcanes</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="europa">
+    <item>-163</item>
+    <item>null</item>
+    <item>-223</item>
+    <item>да</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="ganimedes">
+    <item>-150</item>
+    <item>-160</item>
+    <item>-170</item>
+    <item>да</item>
+    <item>скалистая y cubierta de hielo</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="callisto">
+    <item>-108</item>
+    <item>-139</item>
+    <item>-193</item>
+    <item>да</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="saturn">
+    <item>-139</item>
+    <item>null</item>
+    <item>-193</item>
+    <item>Нет</item>
+    <item>скалистая con hielo</item>
+    <item>5,69 x 10e26</item>
+    <item>120660</item>
+    <item>690</item>
+    <item>35600</item>
+    <item>1426725400 km</item>
+    <item>0.44</item>
+    <item>26.7</item>
+    <item>2.49</item>
+    <item>0.056</item>
+  </string-array>
+  <string-array name="mimas">
+    <item>-190</item>
+    <item>-209</item>
+    <item>-210</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="enceladus">
+    <item>-128</item>
+    <item>-198</item>
+    <item>-240</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="tethys">
+    <item>-170</item>
+    <item>-187</item>
+    <item>-197</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="dione">
+    <item>-175</item>
+    <item>-186</item>
+    <item>-195</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="rhea">
+    <item>-174</item>
+    <item>null</item>
+    <item>-220</item>
+    <item>да</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="titan">
+    <item>-170</item>
+    <item>-179</item>
+    <item>-190</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="lapetus">
+    <item>-143</item>
+    <item>null</item>
+    <item>-183</item>
+    <item>да</item>
+    <item>лед и скалы с толстым слоем газа в атмосфере</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="uranus">
+    <item>-205.2</item>
+    <item>null</item>
+    <item>-224</item>
+    <item>Нет</item>
+    <item>покрыта тонким слоем льда</item>
+    <item>8,68 x 10e25</item>
+    <item>51118</item>
+    <item>1290</item>
+    <item>21300</item>
+    <item>2870972200 km</item>
+    <item>0.72</item>
+    <item>97.9</item>
+    <item>0.77</item>
+    <item>0.047</item>
+  </string-array>
+  <string-array name="titania">
+    <item>-190</item>
+    <item>-203</item>
+    <item>-210</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="oberon">
+    <item>-183</item>
+    <item>-193</item>
+    <item>-200</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="umbriel">
+    <item>-188</item>
+    <item>null</item>
+    <item>-198</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="ariel">
+    <item>-188</item>
+    <item>null</item>
+    <item>-213</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="miranda">
+    <item>-188</item>
+    <item>null</item>
+    <item>-213</item>
+    <item>частично</item>
+    <item>скалистая со льдом и кратерами</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="neptune">
+    <item>-220</item>
+    <item>null</item>
+    <item>-221</item>
+    <item>Нет</item>
+    <item>газообразная</item>
+    <item>1,02 x 10e26</item>
+    <item>49528</item>
+    <item>1640</item>
+    <item>23300</item>
+    <item>4498252900 km</item>
+    <item>0,67 o 19,1 horas</item>
+    <item>29.6</item>
+    <item>1.77</item>
+    <item>0.009</item>
+  </string-array>
+  <string-array name="triton">
+    <item>-225</item>
+    <item>-235</item>
+    <item>-245</item>
+    <item>да</item>
+    <item>газообразная с ядром покрытым льдом</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+    <item>null</item>
+  </string-array>
+  <string-array name="z_xinfo">
+    <item>Обнаружен астрономом Асафа Холла в Военно-морской обсерватории США в Вашингтоне, округ Колумбия, 12 августа 1877 года.</item>
+    <item>Обнаружен астрономом Асафа Холла 18 августа 1877 года, в Военно-морской обсерватории США в Вашингтоне, округ Колумбия</item>
+    <item>Первооткрыватель Галилео Галилей 8 января 1610.</item>
+    <item>Первооткрыватель Галилео Галилей 8 января 1610.</item>
+    <item>Первооткрыватель Галилео Галилей 7 января 1610.</item>
+    <item>Первооткрыватель Галилео Галилей 7 января 1610.</item>
+    <item>Обнаружен астрономом Уильямом Гершелем на 17 сентября 1789 С помощью двенадцати метрового телескопа.</item>
+    <item>Обнаруженный Фредериком Уильямом Гершелем 28 августа 1789 года, во время первого использования своего нового телескопа 1,2 м (47 дюймов).</item>
+    <item>Джованни Доменико Кассини обнаружил в 1684 году вместе с Дионой, другую луну Сатурна с использованием большого телескопа антены.</item>
+    <item>Обнаруженный Кассини, 21 марта 1684. Кассини обнаружил Дион с помощью большого воздушного телескопа.</item>
+    <item>Обнаруженный в 1672 году Джованни Доменико Кассини. Это второй по величине в крупнейшем спутнике Сатурна и девятая по величине луна в солнечной системе.</item>
+    <item>Обнаруженный 25 марта 1655 г. голландским астрономом Христианом Гюйгенсом с первого телескопа, что он и его брат построили.</item>
+    <item>Обнаруженный Джованни Доменико Кассини, французский-итальянский астроном, в октябре 1671 году.</item>
+    <item>Обнаруженный Уильямом Гершелем 11 января 1787 года в тот же день он обнаружил, вторую по величине луну Урана, Оберон.</item>
+    <item>Обнаруженный Уильямом Гершелем 11 января 1787; в тот же день он обнаружил самую большую луну Урана, Титания.</item>
+    <item>Обнаруженный 24 октября 1851 года, Уильям Ласселом.</item>
+    <item>Обнаруженный на 24 октября 1851 Уильям Ласселом, она названа в честь духа неба в поэме Alexander Pope "Похищение локона" и "Буря" Шекспира.</item>
+    <item>Обнаруженный Жерар Койпера 16 февраля 1948 г. на обсерватории Мак-Дональд.</item>
+    <item>Обнаруженный 10 октября 1846 года, английским астрономом Уильям Лассел. Это единственный большой спутник в Солнечной системе с ретроградной орбитой, орбиты которого вращаюца в противоположном направлении планеты.</item>
+  </string-array>
+</resources>
