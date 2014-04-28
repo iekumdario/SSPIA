@@ -24,15 +24,14 @@ public class SolarActivity extends MainClass{
 	public IRemoteService serv;
 	private static int _POS = 0;
 	
+	private Bundle savedInstance;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_solar);		
-	}
-	
-	@Override
-	protected void onResume() {
-		super.onResume();		
+		this.savedInstance = savedInstanceState;
+		setContentView(R.layout.activity_solar);
+		
 		new MenuSettings(this).show();
 		if(firstini() == true){
 			getActionBar().hide();
@@ -49,9 +48,13 @@ public class SolarActivity extends MainClass{
 	}
 	
 	@Override
+	protected void onResume() {
+		super.onResume();		
+	}
+	
+	@Override
 	protected void onPause() {
-		super.onPause();
-		//unbindService(connect);
+		super.onPause();		
 	}
 
 	@Override
@@ -102,11 +105,11 @@ public class SolarActivity extends MainClass{
 		return false;
 	}
 	
-	@Override
+	/*@Override
 	protected void onStop() {
 		super.onStop();
 		this.finish();
-	}
+	}*/
 	
     @Override
     public void onBackPressed() {
