@@ -33,7 +33,8 @@ public class SspiaService extends Service{
 	
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		Log.i("gmaTag", "Recibiendo servicio en: "+startId+" : "+intent);		
+		Log.i("gmaTag", "Recibiendo servicio en: "+startId+" : "+intent);	
+		//runAlarm();
 		show();
 		return START_NOT_STICKY;
 	}

@@ -5,21 +5,13 @@ import com.fiec.sspia.util.CdClass;
 import com.fiec.sspia.util.SatelliteGridAdapterClass;
 import com.fiec.sspia.util.TransitionClass;
 
-import android.R.color;
-import android.app.Dialog;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 

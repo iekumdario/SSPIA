@@ -2,11 +2,9 @@ package com.fiec.sspia.util;
 
 
 import java.io.*;
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
  
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -16,9 +14,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.*;
- 
+
+import com.fiec.sspia.buff.Tag;
+
 import android.util.Log;
  
 public class JSONParser {
@@ -44,11 +43,11 @@ public class JSONParser {
 	            convertResult();  	            
 	        }
     	}catch (UnsupportedEncodingException e) {
-	    	Log.w("Tag", e.toString());
+	    	Log.w(Tag._TAG, e.toString());
 	    } catch (ClientProtocolException e) {
-	    	Log.w("Tag", e.toString());
+	    	Log.w(Tag._TAG, e.toString());
 	    } catch (IOException e) {
-	    	Log.w("Tag", e.toString());
+	    	Log.w(Tag._TAG, e.toString());
 	    }
     	return aux2;
     }
@@ -71,11 +70,11 @@ public class JSONParser {
             
  
         } catch (UnsupportedEncodingException e) {
-        	 Log.w("Tag", e.toString());
+        	 Log.w(Tag._TAG, e.toString());
         } catch (ClientProtocolException e) {
-        	Log.w("Tag", e.toString());
+        	Log.w(Tag._TAG, e.toString());
         } catch (IOException e) {
-        	Log.w("Tag",e.toString());
+        	Log.w(Tag._TAG,e.toString());
         }
 		return sendResult();
     }
@@ -86,7 +85,6 @@ public class JSONParser {
         try {
  
             if(method == "GET"){
-            	//Log.w("gmaTag", "params: "+params1);
                 DefaultHttpClient httpClient = new DefaultHttpClient();
                 String paramString = URLEncodedUtils.format(params1, "utf-8");
                 url += "?" + paramString;
@@ -100,11 +98,11 @@ public class JSONParser {
             
  
         } catch (UnsupportedEncodingException e) {
-        	 Log.w("Tag", e.toString());
+        	 Log.w(Tag._TAG, e.toString());
         } catch (ClientProtocolException e) {
-        	Log.w("Tag", e.toString());
+        	Log.w(Tag._TAG, e.toString());
         } catch (IOException e) {
-        	Log.w("Tag",e.toString());
+        	Log.w(Tag._TAG,e.toString());
         }
 		return sendResult();
     }
@@ -122,12 +120,11 @@ public class JSONParser {
             }
             aux = sb.toString();
             aux2 = aux;
-            //Log.i("gmaTag", aux2);
             is.close();
             reader.close();
            
         } catch (Exception e) {
-            Log.e("Buffer Error", "Error converting result " + e.toString());
+            Log.e(Tag._TAG, "Error converting result " + e.toString());
         }
     }
     
@@ -135,7 +132,7 @@ public class JSONParser {
     	try {
         	json = new JSONObject(aux2);
         } catch (Exception e) {
-            Log.e("JSON Parser", "Error parsing data " + e.toString());
+            Log.e(Tag._TAG, "Error parsing data " + e.toString());
         }
  
         return json;

@@ -1,32 +1,23 @@
 package com.fiec.sspia;
 
-import java.lang.reflect.Field;
-import java.util.Calendar;
-
 import com.fiec.ssapp.R;
 import com.fiec.sspia.db.SolarDb;
+import com.fiec.sspia.mclass.MainClass;
 import com.fiec.sspia.mclass.SSClass;
 import com.fiec.sspia.mclass.SetttingsClass;
+import com.fiec.sspia.mclass.SplashClass;
 import com.fiec.sspia.system.IRemoteService;
-import com.fiec.sspia.system.SspiaService;
+import com.fiec.sspia.util.MenuSettings;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
+import android.app.Activity;
 import android.content.res.Configuration;
-import android.os.Bundle;
-import android.os.IBinder;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.ViewConfiguration;
+import android.os.*;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.*;
+import android.widget.ProgressBar;
 
-public class SolarActivity extends FragmentActivity{
+public class SolarActivity extends MainClass{
 	private String _isChk = "false";
 	private SolarDb db;
 	private SSClass clase;
@@ -36,37 +27,25 @@ public class SolarActivity extends FragmentActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_solar);
-		setSettings();		
-		initialize();		
-		
-		clase = new SSClass(this);
-		clase.selectItem(_POS);
+		setContentView(R.layout.activity_solar);		
 	}
 	
 	@Override
 	protected void onResume() {
-		super.onResume();
-		if(getIsAct().equals("off")){
-			Intent intent = new Intent(this, SspiaService.class);
-			bindService(intent, connect, Context.BIND_AUTO_CREATE);
-			AlarmManager service = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-			Intent in = new Intent(this, SspiaService.class);
-			PendingIntent pintent = PendingIntent.getService(this, 0, in, 
-					PendingIntent.FLAG_CANCEL_CURRENT);
-			Calendar cal = Calendar.getInstance();
-			service.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-					AlarmManager.INTERVAL_HOUR*6, pintent);
-			db.updateLogIsact("on");
-			db.close();
+		super.onResume();		
+		new MenuSettings(this).show();
+		if(firstini() == true){
+			getActionBar().hide();
+			Fragment splash = new SplashClass1(this);
+			FragmentManager fragmentManager = getSupportFragmentManager();
+		    fragmentManager.beginTransaction().replace(R.id.content_frame, splash).commit();
+		}
+		else{		
+			clase = new SSClass(this);
+			SSClass.drawerToggle.syncState();
+			clase.selectItem(_POS);
+			super.start();
 		}		
-		else db.close();
-	}
-	
-	private String getIsAct(){
-		db = new SolarDb(getApplicationContext());
-		db.open();
-		return db.getIsAct();
 	}
 	
 	@Override
@@ -108,11 +87,11 @@ public class SolarActivity extends FragmentActivity{
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		SSClass.drawerToggle.syncState();
+		super.onPostCreate(savedInstanceState);		
 	}
 
 	private boolean firstini() {
+		SolarDb db = new SolarDb(this);
 		db.open();
 		String aux = db.getPlanet();
 		if (aux == null) {
@@ -123,50 +102,6 @@ public class SolarActivity extends FragmentActivity{
 		return false;
 	}
 	
-	private ServiceConnection connect = new ServiceConnection(){
-		@Override
-		public void onServiceConnected(ComponentName name, IBinder service) {
-			serv = IRemoteService.Stub.asInterface(service);
-		}
-
-		@Override
-		public void onServiceDisconnected(ComponentName name) {
-			serv = null;
-		}
-	};
-	
-	private void initialize() {
-		db = new SolarDb(getApplicationContext());
-		
-		if (firstini() == true) {
-			String[] aux; 
-			String[] planets = this.getResources().getStringArray(R.array.theplanets);
-			int[] inits = this.getResources().getIntArray(R.array.planetscode);
-			int[] inits2 = this.getResources().getIntArray(R.array.satcode);
-			String[] dats;
-			db.open();
-			db.createPlanets(planets);
-			// para crear satelites
-			 String[] satellites = this.getResources().getStringArray(R.array.satellites);
-			 int[] satplanet= this.getResources().getIntArray(R.array.satelliteplanet);
-			 db.createSatellites(satellites,satplanet);
-			
-			for (int i = 0; i < inits.length; i++) {
-				dats = this.getResources().getStringArray(inits[i]);
-				db.create(dats);
-			}
-			for (int i = 0; i < inits2.length; i++) {
-				dats = this.getResources().getStringArray(inits2[i]);
-				db.create(dats);
-			}
-			
-			 aux = db.getMarsTemp(db.getIdbyPname("Mars"));
-			 db.createLog("off", "false", aux[0], aux[1]);
-			 _isChk = db.getIsCheck();
-			db.close();
-		}
-	}
-    
 	@Override
 	protected void onStop() {
 		super.onStop();
@@ -184,19 +119,24 @@ public class SolarActivity extends FragmentActivity{
     	super.onDestroy();
     	clase = null;
     }
+}
 
-	public void setSettings() {
-		try {
-			ViewConfiguration config = ViewConfiguration.get(this);
-			Field menuKeyField = ViewConfiguration.class
-					.getDeclaredField("sHasPermanentMenuKey");
-			if (menuKeyField != null) {
-				menuKeyField.setAccessible(true);
-				menuKeyField.setBoolean(config, false);
-			}
-		} catch (Exception ex) {
-			Log.e("gmaTag", "ERROR: "+ex.toString());
-		}
+class SplashClass1 extends Fragment{
+	
+	private ProgressBar progress;
+	private View relative;
+	private Activity context;
+	
+	public SplashClass1(Activity context) {
+		this.context = context;
+	}	  	
+		
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+		Bundle savedInstanceState) {
+	    relative = inflater.inflate(R.layout.loadingactivity, null);
+	    progress = (ProgressBar)relative.findViewById(R.id.loading_progress);
+	    new SplashClass(context, progress).execute();
+	    return relative;
 	}
-
 }

@@ -15,7 +15,8 @@ import com.fiec.sspia.util.JSONParser;
 public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 	
 	public static final String _ACTUALURL = "http://marsweather.ingenology.com/v1/latest/";
-	private boolean isGet = false; 
+	
+	protected boolean isGet = false; 
 	private String[] dats, res;
 	
 	private static final String _TAG = "gmaTag";
@@ -43,7 +44,7 @@ public class PlanetSource extends AsyncTask<Void,Void,Boolean>{
 		dats = act.getResources().getStringArray(R.array.fields);
 		db.updatetemp(id, res[0], res[1], res[2]);
 		res = db.getDetails(id);
-		//chequeo gallo
+		
 		for(i=0;i<res.length;i++){
 			if(res[i].compareTo("null") == 0)
 				nulos++;

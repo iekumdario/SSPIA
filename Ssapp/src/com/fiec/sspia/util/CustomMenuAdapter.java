@@ -15,14 +15,10 @@ import android.widget.TextView;
 
 public class CustomMenuAdapter extends BaseAdapter{
 
-	private String[] planets;
-	private int[] imgs;
 	private LayoutInflater inflater;
-	private Context context;
 	private List<PlanetClass> list;
 	
 	public CustomMenuAdapter(Context context, List<PlanetClass> list) {
-		this.context = context;
 		this.list = list;
 		inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
@@ -48,7 +44,7 @@ public class CustomMenuAdapter extends BaseAdapter{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		PlanetClass planet = list.get(position);
 		View inflate = convertView;
-		TextView text, u_n;
+		TextView text;
 		ImageView image;
 		
 		inflate = inflater.inflate(R.layout.menu_lists, null);

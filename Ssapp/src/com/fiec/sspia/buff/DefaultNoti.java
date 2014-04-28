@@ -1,7 +1,6 @@
 package com.fiec.sspia.buff;
 
 import com.fiec.ssapp.R;
-import com.fiec.sspia.SolarActivity;
 import com.fiec.sspia.TabsPlanets;
 import com.fiec.sspia.util.SSInterfaceNoti;
 import com.fiec.sspia.util.TempClass;

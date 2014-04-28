@@ -2,6 +2,7 @@ package com.fiec.sspia.mclass;
 
 import com.fiec.ssapp.R;
 import com.fiec.sspia.util.FillMenuAdapter;
+import com.fiec.sspia.util.MenuSettings;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -29,7 +30,7 @@ public class SSClass implements OnItemClickListener{
 
 	public SSClass(Activity activity) {
 		this.act = (FragmentActivity) activity;
-		        
+		new MenuSettings(activity).show();
         activity.getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
                 | ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         activity.getActionBar().setDisplayHomeAsUpEnabled(true);

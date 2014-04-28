@@ -4,7 +4,6 @@ import com.fiec.sspia.db.SolarDb;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 public class TransitionClass {
 	protected final static String[] _KEYS = {"titles","images","details"}; 
