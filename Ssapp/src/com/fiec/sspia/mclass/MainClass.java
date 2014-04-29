@@ -98,7 +98,7 @@ public class MainClass extends FragmentActivity{
 	protected void onStop() {
 		super.onStop();
 		//activ.unbindService(connect);
-		this.finish();		
+		//this.finish();		
 	};
 	
 }

@@ -120,6 +120,7 @@ public class SolarActivity extends MainClass{
     @Override
     protected void onDestroy() {
     	super.onDestroy();
+    	this.finish();
     	clase = null;
     }
 }
