@@ -18,7 +18,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.db.SolarDb;
 
 public class SetttingsClass implements OnCheckedChangeListener, OnDismissListener, OnShowListener{

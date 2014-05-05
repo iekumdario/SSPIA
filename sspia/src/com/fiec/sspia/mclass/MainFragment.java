@@ -1,7 +1,7 @@
 package com.fiec.sspia.mclass;
 
-import com.fiec.ssapp.R;
-import com.fiec.sspia.TabsPlanets;
+import com.fiec.sspia.R;
+import com.fiec.sspia.main.TabsPlanets;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -1,6 +1,6 @@
 package com.fiec.sspia.util;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 
 import android.R.color;
 import android.app.Dialog;

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.ProgressBar;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.db.SolarDb;
 
 public class SplashClass extends AsyncTask<Void, Integer, Boolean>{

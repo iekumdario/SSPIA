@@ -1,6 +1,6 @@
-package com.fiec.sspia;
+package com.fiec.sspia.main;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.util.CdClass;
 import com.fiec.sspia.util.SatelliteGridAdapterClass;
 import com.fiec.sspia.util.TransitionClass;

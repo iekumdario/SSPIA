@@ -1,6 +1,6 @@
 package com.fiec.sspia.mclass;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.util.FillMenuAdapter;
 import com.fiec.sspia.util.MenuSettings;
 

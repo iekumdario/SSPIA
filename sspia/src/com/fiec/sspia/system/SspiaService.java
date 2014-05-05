@@ -1,7 +1,7 @@
 package com.fiec.sspia.system;
 
-import com.fiec.sspia.SolarActivity;
 import com.fiec.sspia.db.SolarDb;
+import com.fiec.sspia.main.SolarActivity;
 import com.fiec.sspia.mclass.SSNotific;
 import com.fiec.sspia.util.TempClass;
 

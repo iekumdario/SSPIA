@@ -1,6 +1,6 @@
-package com.fiec.sspia;
+package com.fiec.sspia.main;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.mclass.MainClass;
 import com.fiec.sspia.mclass.SSClass;

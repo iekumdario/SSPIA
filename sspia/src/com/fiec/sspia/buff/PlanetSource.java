@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.ListView;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.util.CustomInfoAdapter;
 import com.fiec.sspia.util.JSONParser;

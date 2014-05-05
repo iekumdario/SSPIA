@@ -2,7 +2,7 @@ package com.fiec.sspia.util;
 
 import java.util.List;
 
-import com.fiec.ssapp.R;
+import com.fiec.sspia.R;
 import com.fiec.sspia.buff.PlanetClass;
 
 import android.content.Context;
