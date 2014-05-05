@@ -21,7 +21,7 @@
     <string name="link_nasa">pds.jpl.nasa.gov/planets/special/planets.htm</string>
     <string name="others">y otras.</string>
     <string name="servicename">sspiaservice</string>
-    <string name="version">0.1.6.2</string>
+    <string name="version">1.0</string>
     <string name="loading">Cargando primer inicio.</string>
     <string name="created">Desarrollado para el Nasa Space apps challenge.</string>
     

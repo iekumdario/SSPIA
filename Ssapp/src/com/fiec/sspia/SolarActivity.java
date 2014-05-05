@@ -105,11 +105,11 @@ public class SolarActivity extends MainClass{
 		return false;
 	}
 	
-	/*@Override
+	@Override
 	protected void onStop() {
 		super.onStop();
 		this.finish();
-	}*/
+	}
 	
     @Override
     public void onBackPressed() {
