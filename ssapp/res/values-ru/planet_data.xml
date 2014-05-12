@@ -32,10 +32,11 @@
     <item>7</item>
     <item>0.206</item>
   </string-array>
+  
   <string-array name="venus">
-    <item>-220</item>
+    <item>420</item> 
     <item>100</item>
-    <item>420</item>
+    <item>-220</item>
     <item>Нет</item>
     <item>пустынная/скалистая с кратерами </item>
     <item>4.87 x 1024</item>
@@ -65,9 +66,9 @@
     <item>null</item>
   </string-array>
   <string-array name="mars">
-    <item>-22</item>
+    <item>-21</item>
     <item>-52</item>
-    <item>-82</item>
+    <item>-83</item>
     <item>Нет</item>
     <item>скалистая</item>
     <item>6,42 x 10e23</item>
@@ -418,7 +419,7 @@
   </string-array>
   <string-array name="neptune">
     <item>-220</item>
-    <item>null</item>
+    <item>-220.5</item>
     <item>-221</item>
     <item>Нет</item>
     <item>газообразная</item>

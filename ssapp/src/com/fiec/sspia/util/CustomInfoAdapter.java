@@ -50,13 +50,21 @@ public class CustomInfoAdapter extends BaseAdapter{
 		tags.setText(tag[position]);
 		switch(_PLANET){
 		case 0: if(position >=0 && position <=2)
-					aux = "ºC";
+					aux = "ºC";				
 				break;
 		case 1: if(position >=0 && position <=1)
 					aux = "ºC";
 				break;
 				
 		}
+		
+		if(tag[position].equals("Venus")){
+			switch(position){
+			case 0: res[position] = "420"; break;
+			case 2: res[position] = "-220"; break;
+			}
+			
+		}	
 		
 		info.setText(res[position]+aux);
 		

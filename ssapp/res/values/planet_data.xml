@@ -35,9 +35,9 @@
     </string-array>
 
     <string-array name="venus">
-        <item>420</item>
+        <item>420</item> 
         <item>100</item>
-        <item>-220</item>
+        <item>-220</item>                
         <item>no</item>
         <item>rocky desert with craters</item>
         <item>4.87 x 1024</item>
@@ -69,9 +69,9 @@
     </string-array>
 
     <string-array name="mars">
-        <item>-22</item>
+        <item>-21</item>
         <item>-52</item>
-        <item>-82</item>
+        <item>-83</item>
         <item>no</item>
         <item>rocky</item>
         <item>6.42 x 10e23</item>
@@ -444,7 +444,7 @@
 
     <string-array name="neptune">
         <item>-220</item>
-        <item>null</item>
+        <item>-220.5</item>
         <item>-221</item>
         <item>no</item>
         <item>gaseous</item>

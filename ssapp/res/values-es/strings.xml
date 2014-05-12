@@ -51,4 +51,11 @@
         <item >ice_recov</item>
         <item >planet_type</item>
     </string-array>   
+    
+    <integer-array name="updates">
+        <item >0</item> <!-- PLANETS -->
+        <item >1</item> <!-- DETAILS -->
+        <item >0</item> <!-- SATELLITES -->
+        <item >0</item> <!-- CHECK -->
+    </integer-array>
 </resources>

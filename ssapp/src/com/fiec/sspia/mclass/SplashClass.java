@@ -51,7 +51,9 @@ public class SplashClass extends AsyncTask<Void, Integer, Boolean>{
 		}
 			
 		 aux = db.getMarsTemp(db.getIdbyPname("Mars"));
-		 db.createLog("off", "true", aux[0], aux[1]);
+		 db.createLog("off", "true", aux[0], aux[1],0);
+		 //db.createLog("off", "true", aux[0], aux[1]);
+		 
 		 _isChk = db.getIsCheck();
 		 publish();
 		db.close();

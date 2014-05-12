@@ -1,6 +1,8 @@
 package com.fiec.sspia.main;
 
 import com.fiec.ssapp.R;
+import com.fiec.sspia.buff.PlanetSource;
+import com.fiec.sspia.buff.Tag;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.mclass.MainClass;
 import com.fiec.sspia.mclass.SSClass;
@@ -14,6 +16,7 @@ import android.content.res.Configuration;
 import android.os.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.*;
 import android.widget.ProgressBar;
 
@@ -24,22 +27,20 @@ public class SolarActivity extends MainClass{
 	public IRemoteService serv;
 	private static int _POS = 0;
 	
-	private Bundle savedInstance;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.savedInstance = savedInstanceState;
 		setContentView(R.layout.activity_solar);
-		
+			
 		new MenuSettings(this).show();
 		if(firstini() == true){
 			getActionBar().hide();
 			Fragment splash = new SplashClass1(this);
 			FragmentManager fragmentManager = getSupportFragmentManager();
-		    fragmentManager.beginTransaction().replace(R.id.content_frame, splash).commit();
+		    fragmentManager.beginTransaction().replace(R.id.content_frame, splash).commit();		    
 		}
-		else{		
+		else{	
+			checkUpdate(this);
 			clase = new SSClass(this);
 			SSClass.drawerToggle.syncState();
 			clase.selectItem(_POS);
@@ -94,7 +95,7 @@ public class SolarActivity extends MainClass{
 	}
 
 	private boolean firstini() {
-		SolarDb db = new SolarDb(this);
+		db = new SolarDb(this);
 		db.open();
 		String aux = db.getPlanet();
 		if (aux == null) {

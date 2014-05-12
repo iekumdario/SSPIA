@@ -1,5 +1,7 @@
 package com.fiec.sspia.db;
 
+import com.fiec.sspia.buff.Tag;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -22,6 +24,7 @@ public class SolarDb {
 			DBHelper.TEMP_MIN, DBHelper.ICECOVER, DBHelper.SURFACE};
 	private String[] mars_columns2 = {DBHelper.TEMP_MIN, DBHelper.TEMPMAX};
 	private String[] mars_columns = {DBHelper.LOG_TEMPMIN, DBHelper.LOG_TEMPMAX};
+	private String[] check_column = {DBHelper.LOG_TEMPMIN};
 
 	public SolarDb(Context context) {
 		dbhelper = new DBHelper(context);
@@ -52,12 +55,17 @@ public class SolarDb {
 	}
 	
 	public String getPlanet(){
-		Cursor cursor = db.query(DBHelper.TABLEPLANET, allColumns_planet, null, null, null, null, null);
-		if(cursor.getCount()==0){			
+		try{
+			Cursor cursor = db.query(DBHelper.TABLEPLANET, allColumns_planet, null, null, null, null, null);
+			if(cursor.getCount()==0){			
+				return null;
+			}
+			cursor.move(1);
+			return cursor.getString(1);
+			}
+		catch(Exception ex){
 			return null;
 		}
-		cursor.move(1);
-		return cursor.getString(1);		
 	}
 	
 	public String[] getSatDetails(int id){
@@ -135,6 +143,27 @@ public class SolarDb {
 					+ dats[i] + "'," + (i + 1) + ")");
 		return true;
 	}
+	
+	public boolean createTableDetalle(){
+		String DB_CREATE3 = "create table "+DBHelper.TABLEDETALLE+"("
+				+DBHelper.IDDETALLE+" integer primary key autoincrement, "
+				+DBHelper.TEMPMAX+" text, "
+				+DBHelper.TEMP_MED+" text, "
+				+DBHelper.TEMP_MIN+" text, "+
+				DBHelper.ICECOVER+" text, "
+				+DBHelper.SURFACE+" text, "
+				+DBHelper.MASS+" text, "
+				+DBHelper.DIAMETER+" text, "+
+				DBHelper.MEAN_DEN+" text, "
+				+DBHelper.SCAP_VEL+" text, "
+				+DBHelper.AVDIS+" text, "
+				+DBHelper.ROTPER+" text, "+
+				DBHelper.OBLIQUITI+" text, "
+				+DBHelper.ORBIT+" text, "
+				+DBHelper.ORBIT_ECC+" text)";
+		db.execSQL(DB_CREATE3);
+		return true;		
+	}
 
 	public boolean create(String[] dats) {
 		db.execSQL("INSERT INTO " + DBHelper.TABLEDETALLE + "("
@@ -153,7 +182,70 @@ public class SolarDb {
 		return true;
 	}
 	
-	public boolean createLog(String arg1, String arg2, String arg3, String arg4){
+	public boolean dropTable(int _TABLE){
+		try{
+			switch(_TABLE){
+				case 0: //DROP PLANETS
+						db.execSQL("DROP TABLE IF EXISTS "+DBHelper.TABLEPLANET); break;
+				case 1: //DROP DETALLE
+						db.execSQL("DROP TABLE IF EXISTS "+DBHelper.TABLEDETALLE); break;						
+				case 2: //DROP MOON
+						db.execSQL("DROP TABLE IF EXISTS "+DBHelper.TABLEMOON); break;
+				case 3: //DROP CHECK
+						db.execSQL("DROP TABLE IF EXISTS "+DBHelper.TABLECHECK); break;
+			}
+			return true;
+		}		
+		catch(SQLException ex){Log.e(Tag._TAG, ex.toString()); return false;}		
+	}
+	
+	public boolean updateDetail(String[] dats){
+		db.execSQL("UPDATE " + DBHelper.TABLEDETALLE + " SET " 
+				+ DBHelper.TEMPMAX + "='"+dats[0]+"'," 
+				+ DBHelper.TEMP_MED +"='"+dats[1]+"',"
+				+ DBHelper.TEMP_MIN + "='"+dats[2]+"'," 
+				+ DBHelper.ICECOVER + "='"+dats[3]+"',"
+				+ DBHelper.SURFACE + "='"+dats[4]+"',"
+				+ DBHelper.MASS + "='"+dats[5]+"',"
+				+ DBHelper.DIAMETER + "='"+dats[6]+"',"
+				+ DBHelper.MEAN_DEN + "='"+dats[7]+"',"
+				+ DBHelper.SCAP_VEL + "='"+dats[8]+"',"
+				+ DBHelper.AVDIS + "='"+dats[9]+"',"
+				+ DBHelper.ROTPER + "='"+dats[10]+"',"
+				+ DBHelper.OBLIQUITI + "='"+dats[11]+"',"
+				+ DBHelper.ORBIT + "='"+dats[12]+"',"
+				+ DBHelper.ORBIT_ECC +"='"+dats[13]+"';");
+		return true;
+	}
+	
+	public boolean createTableLog(){
+		try{
+			String DB_CREATE4 = "create table "+DBHelper.TABLECHECK+"("
+					+DBHelper.ISACT+" text not null, "
+					+DBHelper.ISCHECK+" text not null, "
+					+DBHelper.LOG_TEMPMIN+" text not null, "
+					+DBHelper.LOG_TEMPMAX+" text not null, "
+					+DBHelper.LOG_TABLEUPDATE+" integer not null)";
+			db.execSQL(DB_CREATE4);
+			return true;
+		}
+		catch(Exception ex){
+			Log.e(Tag._TAG, ex.toString());
+			return false;
+		}
+	}
+	
+	public boolean createLog(String arg1, String arg2, String arg3, 
+			String arg4, int arg5){
+		db.execSQL("INSERT INTO "+DBHelper.TABLECHECK+ "("+DBHelper.ISACT+","
+				+DBHelper.ISCHECK+","+DBHelper.LOG_TEMPMIN+","+DBHelper.LOG_TEMPMAX+","
+				+DBHelper.LOG_TABLEUPDATE+")"+
+				" VALUES ('"+arg1+"','"+arg2+"','"+arg3+"','"+arg4+"','"+arg5+"')");
+		return true;
+	}
+	
+	public boolean createLog_2(String arg1, String arg2, String arg3, 
+			String arg4){
 		db.execSQL("INSERT INTO "+DBHelper.TABLECHECK+ "("+DBHelper.ISACT+","
 				+DBHelper.ISCHECK+","+DBHelper.LOG_TEMPMIN+","+DBHelper.LOG_TEMPMAX+")"+
 				" VALUES ('"+arg1+"','"+arg2+"','"+arg3+"','"+arg4+"')");
@@ -175,6 +267,11 @@ public class SolarDb {
 					+ DBHelper.LOG_TEMPMAX + "='" + arg2+"';");
 		return true;
 	}
+	public boolean updateLogUpdate(int arg1) {
+		db.execSQL("update " + DBHelper.TABLECHECK + " set "
+					+ DBHelper.LOG_TABLEUPDATE + "='" + arg1 + "';");
+		return true;
+	}	
 	
 	public String getIsAct(){
 		Cursor cursor = db.query(DBHelper.TABLECHECK,
@@ -188,6 +285,22 @@ public class SolarDb {
 				new String[] { DBHelper.ISCHECK }, null, null, null, null, null);
 		cursor.moveToFirst();
 		return cursor.getString(0);
+	}
+	
+	public String getUpdate(){
+		try{
+			Cursor cursor = db.query(DBHelper.TABLECHECK,
+					new String[] { DBHelper.LOG_TABLEUPDATE }, null, null, null, null, null);
+			if(cursor.getCount()==0){			
+				return null;
+			}
+			cursor.moveToFirst();
+			return String.valueOf(cursor.getInt(0));
+		}
+		catch(Exception ex){
+			Log.e(Tag._TAG, ex.toString());
+			return null;
+		}
 	}
 
 	// agrega datos a tabla "table_moon"

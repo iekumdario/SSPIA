@@ -21,6 +21,7 @@ public class DBHelper extends SQLiteOpenHelper{
 		public static final String ISCHECK = "ischeck";
 		public static final String LOG_TEMPMIN = "log_tempmin";
 		public static final String LOG_TEMPMAX = "log_tempmax";
+		public static final String LOG_TABLEUPDATE = "log_update";
 		
 		public static final String TABLEDETALLE = "table_detalle";
 		public static final String TEMPMAX = "temp_max";
@@ -60,6 +61,9 @@ public class DBHelper extends SQLiteOpenHelper{
 			OBLIQUITI+" text, "+ORBIT+" text, "+ORBIT_ECC+" text)";
 	
 	public static final String DB_CREATE4 = "create table "+TABLECHECK+"("+ISACT+" text not null, "
+			+ISCHECK+" text not null, "+LOG_TEMPMIN+" text not null, "+LOG_TEMPMAX+" text not null, "
+			+LOG_TABLEUPDATE+" integer not null)";
+	public static final String DB_CREATE4_1 = "create table "+TABLECHECK+"("+ISACT+" text not null, "
 			+ISCHECK+" text not null, "+LOG_TEMPMIN+" text not null, "+LOG_TEMPMAX+" text not null)";
 
 	public DBHelper(Context context) {
