@@ -40,7 +40,7 @@ public class SolarActivity extends MainClass{
 		    fragmentManager.beginTransaction().replace(R.id.content_frame, splash).commit();		    
 		}
 		else{	
-			checkUpdate(this);
+			//checkUpdate(this);
 			clase = new SSClass(this);
 			SSClass.drawerToggle.syncState();
 			clase.selectItem(_POS);

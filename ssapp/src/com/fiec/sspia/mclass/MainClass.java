@@ -55,7 +55,7 @@ public class MainClass extends FragmentActivity{
 			db.close();
 		}		
 		else db.close();
-		checkUpdate(act);
+		//checkUpdate(act);
 	}
 	
 	private String getIsAct2(Activity act){
