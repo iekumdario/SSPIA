@@ -1,7 +1,7 @@
 package com.fiec.sspia.main;
 
 import com.fiec.ssapp.R;
-import com.fiec.sspia.db.SolarDb;
+import com.fiec.sspia.db.Planets;
 
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
@@ -18,19 +18,31 @@ public class TabsPlanets{
 	public static int pos;
 	private static String _C= "#33B5E5";
 	
-	public TabsPlanets(FragmentActivity acti, Fragment frag, View parentview, String pname, int pos) {
-		TabsPlanets.act = acti;
-		TabsPlanets.pname = pname;
+	public static Planets planet;
+	public static String[] tags;
+	
+	public TabsPlanets(FragmentActivity act, Fragment frag, View parentview, Planets plan, int pos, String[] tag) {
+		TabsPlanets.act = act;
+		TabsPlanets.pname = plan.getName();
 		TabsPlanets.pos = pos;
+		planet = plan;
+		tags = tag;
 		th = (FragmentTabHost)parentview.findViewById(android.R.id.tabhost);
-		th.setup(acti, frag.getChildFragmentManager(), R.id.realtabcontent);
+		th.setup(act, frag.getChildFragmentManager(), R.id.realtabcontent);
 	}
 	
-	public boolean addTabs(){	
-		
+	public boolean addTabs2(){		
+		//EDITAR INFORMATION TAB PARA MANDARLE PARAMETRO PLANET!!
+		th.addTab(th.newTabSpec("tab1").setIndicator("Information"),null, null);
+	    
+		return true;
+	}
+	
+	public boolean addTabs(){
+		//EDITAR INFORMATION TAB PARA MANDARLE PARAMETRO PLANET!!
 		th.addTab(th.newTabSpec("tab1").setIndicator("Information"),InformationTab.class, null);
 		
-		if(getSatCount() >= 1)
+		if(planet.getSat() >= 1)
 			th.addTab(th.newTabSpec("tab2").setIndicator("Satellites"),SatellitesClass.class, null);
 		
 	    for(int i=0;i<th.getTabWidget().getChildCount();i++) 
@@ -41,14 +53,4 @@ public class TabsPlanets{
 	    
 		return true;
 	}
-	
-	private int getSatCount(){
-		SolarDb db = new SolarDb(act);
-		int a;
-		db.open();
-		a = db.getSatellitesByPlanetId(db.getIdbyPname(pname)).length;
-		db.close();
-		return a;
-	}
-
 }

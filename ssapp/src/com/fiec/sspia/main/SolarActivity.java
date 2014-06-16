@@ -1,11 +1,8 @@
 package com.fiec.sspia.main;
 
 import com.fiec.ssapp.R;
-import com.fiec.sspia.buff.PlanetSource;
-import com.fiec.sspia.buff.Tag;
 import com.fiec.sspia.db.SolarDb;
 import com.fiec.sspia.mclass.MainClass;
-import com.fiec.sspia.mclass.SSClass;
 import com.fiec.sspia.mclass.SetttingsClass;
 import com.fiec.sspia.mclass.SplashClass;
 import com.fiec.sspia.system.IRemoteService;
@@ -16,20 +13,22 @@ import android.content.res.Configuration;
 import android.os.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.*;
 import android.widget.ProgressBar;
 
 public class SolarActivity extends MainClass{
+	
 	private String _isChk = "false";
 	private SolarDb db;
-	private SSClass clase;
 	public IRemoteService serv;
 	private static int _POS = 0;
 	
-	@Override
+	
+	
+	/*@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//setContentView(R.layout.prototipe);
 		setContentView(R.layout.activity_solar);
 			
 		new MenuSettings(this).show();
@@ -45,7 +44,7 @@ public class SolarActivity extends MainClass{
 			SSClass.drawerToggle.syncState();
 			clase.selectItem(_POS);
 			super.start();
-		}		
+		}
 	}
 	
 	@Override
@@ -78,7 +77,7 @@ public class SolarActivity extends MainClass{
     	case R.id.action_settings: new SetttingsClass(this).isNoty(_isChk); break;
     	case R.id.about: new SetttingsClass(this).isAbout();
     	}
-        if (SSClass.drawerToggle.onOptionsItemSelected(item)) {
+        if (SSClass.drawerToggle.onOptionsItemSelected(item)) { 
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -87,11 +86,6 @@ public class SolarActivity extends MainClass{
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
-	}
-
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);		
 	}
 
 	private boolean firstini() {
@@ -143,5 +137,5 @@ class SplashClass1 extends Fragment{
 	    progress = (ProgressBar)relative.findViewById(R.id.loading_progress);
 	    new SplashClass(context, progress).execute();
 	    return relative;
-	}
+	}*/
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fiec.ssapp"
-    android:versionCode="2"
-    android:versionName="1.1" >
+    android:versionCode="4"
+    android:versionName="1.1.2" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="com.fiec.sspia.main.SolarActivity"
+            android:name="com.fiec.sspia.mclass.MainClass"
             android:label="@string/app_name" 
             android:screenOrientation="portrait">
             <intent-filter>
@@ -29,13 +29,13 @@
             </intent-filter>
         </activity>
         
-        <receiver android:name="com.fiec.sspia.system.BroadcastRec">
+        <receiver android:name=".BroadcastRec">
             <intent-filter >
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>            
         </receiver>
         
-        <service android:name="com.fiec.sspia.system.SspiaService"
+        <service android:name=".SspiaService"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name">            
         </service>

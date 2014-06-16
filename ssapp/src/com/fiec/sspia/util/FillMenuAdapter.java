@@ -6,33 +6,35 @@ import java.util.List;
 import android.content.Context;
 
 import com.fiec.sspia.buff.PlanetClass;
+import com.fiec.sspia.db.Planets;
 
 public class FillMenuAdapter {
 	
 	private Context context;
 	private CustomMenuAdapter adapter;
-	private String[] items;
-	private int[] ints;
 	private List<PlanetClass> listmenu;
 	private int cont, i;
 	
-	public FillMenuAdapter(Context context, String[] items, int[] ints){
-		this.context = context; 
-		this.items = items; 
-		this.ints = ints;
+	private Planets[] planets;
+	
+	public FillMenuAdapter(Context context, Planets[] planets){
+		this.context = context;
+		this.planets = planets;
 		
 		this.listmenu = new ArrayList<PlanetClass>();
 	}
 	
 	public CustomMenuAdapter getItemAdapter(){
 		listmenu.clear();
-		if(items.length >= 1){
+		int length = this.planets.length;
+		
+		if(length >= 1){
 			cont = 0;
-			for(i=0; i<items.length; i++){
+			for(i=0; i<length; i++){
 				listmenu.add(new PlanetClass(){
 					{
-						_p0 = items[cont];
-						_img0 = ints[cont];
+						_p0 = planets[cont].getName();
+						_img0 = planets[cont].getImgres();
 						cont++;
 						
 					}

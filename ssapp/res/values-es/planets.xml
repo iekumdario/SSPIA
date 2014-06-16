@@ -67,37 +67,37 @@
     </integer-array>
     
     <integer-array name="planetscode">
-        <item>2131099649</item>
-        <item>2131099650</item>
-        <item>2131099651</item>
-        <item>2131099652</item>
-        <item>2131099655</item>
-        <item>2131099660</item>
-        <item>2131099668</item>
-        <item>2131099674</item>
+        <item>2131165185</item>
+        <item>2131165186</item>
+        <item>2131165187</item>
+        <item>2131165188</item>
+        <item>2131165191</item>
+        <item>2131165196</item>
+        <item>2131165204</item>
+        <item>2131165210</item>
     </integer-array>
 
         
     <integer-array name="satcode">
-        <item>2131099653</item><!-- mars -->
-        <item>2131099654</item>
-        <item>2131099656</item><!-- jupiter -->
-        <item>2131099657</item> 
-        <item>2131099658</item>
-        <item>2131099659</item>
-        <item>2131099661</item><!-- saturn -->
-        <item>2131099662</item>
-        <item>2131099662</item>
-        <item>2131099664</item>
-        <item>2131099665</item>
-        <item>2131099666</item>
-        <item>2131099667</item>
-        <item>2131099669</item><!-- uranus -->
-        <item>2131099670</item>
-        <item>2131099671</item>
-        <item>2131099672</item>
-        <item>2131099673</item>
-        <item>2131099675</item><!-- neptune -->
+        <item>2131165189</item><!-- mars -->
+        <item>2131165190</item>
+        <item>2131165192</item><!-- jupiter -->
+        <item>2131165193</item> 
+        <item>2131165194</item>
+        <item>2131165195</item>
+        <item>2131165197</item><!-- saturn -->
+        <item>2131165198</item>
+        <item>2131165199</item>
+        <item>2131165200</item>
+        <item>2131165201</item>
+        <item>2131165202</item>
+        <item>2131165203</item>
+        <item>2131165205</item><!-- uranus -->
+        <item>2131165206</item>
+        <item>2131165207</item>
+        <item>2131165208</item>
+        <item>2131165209</item>
+        <item>2131165211</item><!-- neptune -->
    </integer-array>    
    
     <integer-array name="satellitesimg">

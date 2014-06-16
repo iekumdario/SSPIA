@@ -12,6 +12,11 @@ public class TransitionClass {
 	private int aux2;
 	private SolarDb db;
 	
+	/***
+	 * 
+	 * PASAR PARAMETRO DE SATELLITE ¡URGE!!
+	 */
+	
 	public TransitionClass(FragmentActivity act, String[] arg1, int[] arg2) {
 		this.arg1 = arg1;
 		this.arg2 = arg2;
@@ -22,7 +27,7 @@ public class TransitionClass {
 		this.db.open();
 		pos = db.getIdbyPname(pname);
 		this.aux = db.getSatellitesByPlanetId(pos);
-		this.aux2 = db.getRealSatBySatellitesId(aux[pos2]);
+		this.aux2 = db.getSatDetailId(aux[pos2]);
 		this.arg5 = db.getSatDetails(aux2+1);
 		this.db.close();
 		return aux;

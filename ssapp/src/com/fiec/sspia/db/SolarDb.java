@@ -6,9 +6,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
-public class SolarDb {
+public class SolarDb implements Parcelable{
 
 	private SQLiteDatabase db;
 	private DBHelper dbhelper;
@@ -251,16 +253,17 @@ public class SolarDb {
 				" VALUES ('"+arg1+"','"+arg2+"','"+arg3+"','"+arg4+"')");
 		return true;
 	}
-	public boolean updateLogIsact(String arg1) {
-		db.execSQL("update " + DBHelper.TABLECHECK + " set "
-					+ DBHelper.ISACT + "='" + arg1 + "';");
-		return true;
-	}
 	public boolean updateLogIscheck(String arg2) {
 		db.execSQL("update " + DBHelper.TABLECHECK + " set "
 					+ DBHelper.ISCHECK + "='" + arg2 + "';");
 		return true;
 	}
+	public boolean updateLogIsact(String arg1) {
+		db.execSQL("update " + DBHelper.TABLECHECK + " set "
+					+ DBHelper.ISACT + "='" + arg1 + "';");
+		return true;
+	}
+
 	public boolean updateLogTemp(String arg1, String arg2) {
 		db.execSQL("update " + DBHelper.TABLECHECK + " set "
 					+ DBHelper.LOG_TEMPMIN + "='" + arg1 + "',"
@@ -329,11 +332,39 @@ public class SolarDb {
 		return satellites;
 	}
 	
-	public int getRealSatBySatellitesId(int satId){
+	public int getSatDetailId(int satId){
 		Cursor cursor = db.query(DBHelper.TABLEMOON,
 				new String[] { DBHelper.IDDETALLE }, DBHelper.IDLUNA + "="
 						+ satId, null, null, null, null);
 		cursor.moveToFirst();
 		return cursor.getInt(0);
 	}
+	
+	/***
+	 * Nuevo codigo de aqui
+	 */
+	
+	public int getSatellitesIdByName(String satname){
+		Cursor cursor = db.query(DBHelper.TABLEMOON,
+				new String[] { DBHelper.IDLUNA }, DBHelper.NAME + "='"
+						+ satname+"'", null, null, null, null);
+		cursor.moveToFirst();
+		return cursor.getInt(0);
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	/***
+	 * Hasta aqui
+	 */
 }

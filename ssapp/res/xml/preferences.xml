@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+     <CheckBoxPreference android:title="isfirst"
+            android:summary="primer inicio"
+            android:defaultValue="true"
+            android:key="fini"/>
+     <CheckBoxPreference android:title="ischeck"
+         android:summary="Chequea por notificaciones"
+         android:defaultValue="true"
+         android:key="ischeq"/>
+     <EditTextPreference android:title="logupdate"
+         android:summary="verifica por actualizacion"
+         android:defaultValue="1"
+         android:key="logup"/>
+     <EditTextPreference android:title="maxvalue"
+         android:summary="max temp user"
+         android:defaultValue="-83"
+         android:key="maxmars"/>
+     <EditTextPreference android:title="minvalue"
+         android:summary="min temp user"
+         android:defaultValue="-21"
+         android:key="minmars"/>
+     <EditTextPreference android:title="maasurl"
+         android:summary="url de la MAAS API"
+         android:defaultValue="http://marsweather.ingenology.com/v1/latest/"
+         android:key="maasurlkey"/>
+     
+</PreferenceScreen>
